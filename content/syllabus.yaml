@@ -1,0 +1,35 @@
+title: Applied AI for Grid Connection Teams
+modules:
+  - id: m01
+    dir: m01-foundations
+    title: AI foundations through a grid lens
+    summary: How LLMs work, why they confidently invent clause numbers, and what "agentic" really means.
+    status: available
+  - id: m02
+    title: Mapping the team's work
+    summary: Value-stream map the connection lifecycle and score where AI can help.
+    status: coming
+  - id: m03
+    title: Copilot for study automation
+    summary: Agent-assisted Python for batch studies, post-processing and GPS checks.
+    status: coming
+  - id: m04
+    title: Requirements, documents and knowledge
+    summary: Retrieval, clause-to-evidence traceability and keeping knowledge between projects.
+    status: coming
+  - id: m05
+    title: Agentic workflows for grid leads
+    summary: Comment registers, meeting actions, Jira and consistent correspondence.
+    status: coming
+  - id: m06
+    title: Verification, risk and accountability
+    summary: Hallucination controls, prompt injection, confidential data and engineering sign-off.
+    status: coming
+  - id: m07
+    title: Governance and adoption
+    summary: A team AI standard, review gates, skills and measuring impact.
+    status: coming
+  - id: m08
+    title: "Capstone: the team efficiency strategy"
+    summary: A holistic strategy covering process, tools, people, governance, roadmap and metrics.
+    status: coming

@@ -1,0 +1,66 @@
+name: Guard, build and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  content-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for banned terms
+        env:
+          # Newline-separated list kept in a repository secret, so the terms
+          # themselves never appear in the repo. Matching is case-insensitive.
+          BANNED_TERMS: ${{ secrets.BANNED_TERMS }}
+        run: |
+          if [ -z "$BANNED_TERMS" ]; then
+            echo "::warning::BANNED_TERMS secret is not set; content guard skipped."
+            exit 0
+          fi
+          printf '%s\n' "$BANNED_TERMS" | sed -e 's/\r$//' -e '/^[[:space:]]*$/d' > "$RUNNER_TEMP/terms"
+          if git ls-files -z | xargs -0 grep -I -i -l -F -f "$RUNNER_TEMP/terms"; then
+            echo "::error::The files listed above contain a banned term. Remove it before merging."
+            exit 1
+          fi
+          echo "No banned terms found."
+
+  build:
+    needs: content-guard
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

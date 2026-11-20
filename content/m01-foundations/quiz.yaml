@@ -1,0 +1,73 @@
+questions:
+- scenario: Tom asks an AI assistant, with no documents attached, which NER clause covers voltage control settling time. It answers quickly with a clause number and a time limit, in a confident tone.
+  question: What is the best way to treat this answer?
+  options:
+  - Accept it, because the assistant is confident and the format is correct.
+  - Treat it as a lead to check against the current NER text before it is used anywhere.
+  - Ask the assistant again; if it gives the same answer twice, it is correct.
+  - Discard it; AI answers about regulation are never useful.
+  answer: 1
+  explanation: An ungrounded answer comes from memory, and wrong clause numbers look exactly like right ones. Getting the same answer twice is weak evidence, since the model can be consistently wrong. The answer is a useful lead, so check it at the source.
+- scenario: Aisha wants first-pass drafts for 46 round 2 comments.
+  question: Which prompt design is most reliable?
+  options:
+  - Draft responses to these comments.
+  - Draft responses using everything you know about the NER.
+  - For each comment, using only the attached GPS excerpt and previous response, draft a reply. Quote the clause text you rely on. Write 'needs engineer input' where the material doesn't cover it.
+  - Draft responses that will satisfy AEMO.
+  answer: 2
+  explanation: Supplying the source, limiting the model to it, asking for quotes and allowing a "can't answer" path are the four parts of grounding. The "satisfy AEMO" prompt invites agreeable, confident text that isn't based on anything.
+- scenario: Your team needs to process each review round the same way every time - classify comments, assign owners, draft responses, update the register.
+  question: What design fits best to start with?
+  options:
+  - A defined workflow where the AI does specific steps and an engineer reviews the drafts.
+  - A fully autonomous agent that handles the round end to end.
+  - Chat only - engineers copy and paste comments one at a time.
+  - No AI; regulatory work can't use it.
+  answer: 0
+  explanation: The process is repeated and well understood, and it is audited. That favours a workflow, which is predictable and easy to audit, at the draft or do-then-review rung. Agents fit better where the path varies and the output is easy to check.
+- scenario: A converter-based model study needs a per-unit to MVA conversion across 60 turbines and two transformers.
+  question: How should the AI be used for the calculation?
+  options:
+  - Ask it for the final numbers in the chat.
+  - Avoid AI entirely for anything numerical.
+  - Ask two different models and average their answers.
+  - Have it write a script that does the calculation, then check the script and its output.
+  answer: 3
+  explanation: Code is visible, repeatable and checkable. Numbers worked out inside the chat can't be inspected. "Code, not mental maths" is a core verification pattern.
+- scenario: Mei says checking AI output takes as long as doing the work.
+  question: Which response best reflects the course's view?
+  options:
+  - She's right; AI saves no time on engineering work.
+  - Skip checking for low-risk documents.
+  - Use patterns that make checking cheap - quote-backed claims, scripts instead of mental maths, risk-based spot checks - and choose tasks where checking is faster than doing.
+  - Have a second AI check the first AI.
+  answer: 2
+  explanation: The gain comes from tasks where verification is cheap and from making verification cheap. A second AI can help as an adversarial reviewer, but it doesn't replace engineer accountability.
+- scenario: An agent in VS Code wants to run a Python script and then create 12 Jira issues for the review round.
+  question: Which part most clearly makes this "agentic" rather than chat?
+  options:
+  - It uses tools to take actions, looks at the results and decides its next steps in a loop.
+  - It writes fluent text.
+  - It uses a large context window.
+  - It runs inside VS Code.
+  answer: 0
+  explanation: Agents are defined by the loop - plan, act with tools, observe, decide - not by text quality or where they run.
+- scenario: You're placing "GPS negotiation position papers" on the autonomy ladder.
+  question: Which rung fits best?
+  options:
+  - Rung 4 - AI does it, sample review.
+  - Rung 3 - AI completes it, engineer checks before sending.
+  - Rung 5 - autonomous.
+  - Rung 1 - AI helps you understand and prepare; people write and decide.
+  answer: 3
+  explanation: The consequence of an error is high, the work needs judgement, and checking it is hard. That puts it on a low rung. AI can still help you prepare, for example by summarising precedent, listing counter-arguments or playing the TNSP side.
+- scenario: A new version of an AEMO guideline was published last month.
+  question: What's the main risk if the team asks an AI assistant about it from memory?
+  options:
+  - None; models update themselves daily.
+  - The model may describe the previous version confidently, because of its training cutoff.
+  - The model will refuse to answer.
+  - The answer will be in a different language.
+  answer: 1
+  explanation: Models have a training cutoff and don't know about later changes unless you supply the current text. They rarely say that they don't know.

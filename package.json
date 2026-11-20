@@ -1,0 +1,23 @@
+{
+  "name": "applied-ai-course",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "idb-keyval": "^6.2.1",
+    "marked": "^14.1.4",
+    "preact": "^10.24.3",
+    "yaml": "^2.6.1"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.9.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vite-plugin-pwa": "^0.21.1"
+  }
+}
