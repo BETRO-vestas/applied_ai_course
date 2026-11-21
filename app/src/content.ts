@@ -7,7 +7,7 @@ const yamlFiles = import.meta.glob('../../content/**/*.yaml', { query: '?raw', i
 
 export interface Doc { slug: string; title: string; minutes?: number; html: string }
 export interface QuizQuestion { scenario: string; question: string; options: string[]; answer: number; explanation: string }
-export interface Card { front: string; back: string }
+export interface Card { key: string; moduleId: string; after: number; front: string; back: string }
 export interface Module {
   id: string; dir?: string; title: string; summary: string; status: 'available' | 'coming';
   lessons: Doc[]; quiz: QuizQuestion[]; cards: Card[]; lab?: Doc; memo?: Doc;
@@ -58,7 +58,13 @@ export const modules: Module[] = syllabus.modules.map((m) => {
     ...m,
     lessons: docsIn(`${m.dir}/lessons/`),
     quiz: file<{ questions: QuizQuestion[] }>(`${m.dir}/quiz.yaml`)?.questions ?? [],
-    cards: file<{ cards: Card[] }>(`${m.dir}/flashcards.yaml`)?.cards ?? [],
+    cards: (file<{ cards: Omit<Card, 'key' | 'moduleId'>[] }>(`${m.dir}/flashcards.yaml`)?.cards ?? []).map((c) => ({
+      ...c,
+      after: c.after ?? 1,
+      moduleId: m.id,
+      // Key from the question text, so reordering cards doesn't scramble schedules.
+      key: `${m.id}/${c.front.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48)}`,
+    })),
     lab: docAt(`${m.dir}/lab.md`),
     memo: docAt(`${m.dir}/memo.md`),
   };

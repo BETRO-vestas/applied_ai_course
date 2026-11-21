@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'preact/hooks';
-import { modules, getModule, projectPack, courseTitle, type Module, type Doc } from './content';
-import { useProgress, update, exportJson, importJson, resetAll, type Progress } from './store';
+import { modules, getModule, projectPack, courseTitle, type Module, type Doc, type Card } from './content';
+import { useProgress, update, exportJson, importJson, resetAll, logActivity, streak, type Progress } from './store';
+import { schedule, preview, today, NEW_PER_DAY, type Grade } from './srs';
 import { href } from './router';
 
 /* ---------- helpers ---------- */
@@ -20,6 +21,36 @@ function stepsFor(m: Module, p: Progress): Step[] {
 
 const kindIcon: Record<Step['kind'], string> = { lesson: '📖', quiz: '❓', lab: '💻', memo: '✍️' };
 
+/** Cards unlock when the lesson they belong to is complete. */
+function unlocked(c: Card, p: Progress) {
+  const m = getModule(c.moduleId);
+  const lesson = m?.lessons[c.after - 1];
+  return !!lesson && !!p.lessons[`${c.moduleId}/${lesson.slug}`];
+}
+
+function deckStatus(p: Progress, moduleId?: string) {
+  const t = today();
+  const all = modules.filter((m) => m.status === 'available' && (!moduleId || m.id === moduleId)).flatMap((m) => m.cards);
+  const open = all.filter((c) => unlocked(c, p));
+  const due = open.filter((c) => p.cards[c.key] && p.cards[c.key].due <= t);
+  const introducedToday = Object.values(p.cards).filter((s) => s.firstSeen === t).length;
+  const fresh = open.filter((c) => !p.cards[c.key]).slice(0, Math.max(0, NEW_PER_DAY - introducedToday));
+  const studied = open.filter((c) => p.cards[c.key]).length;
+  const next = open.map((c) => p.cards[c.key]?.due).filter((d): d is string => !!d && d > t).sort()[0];
+  return { all, open, due, fresh, studied, next, locked: all.length - open.length };
+}
+
+function shuffle<T>(a: T[]): T[] {
+  const r = [...a];
+  for (let i = r.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; }
+  return r;
+}
+
+function niceDate(d: string) {
+  const [y, m, day] = d.split('-').map(Number);
+  return new Date(y, m - 1, day).toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' });
+}
+
 function Prose({ html }: { html: string }) {
   return <div class="prose" dangerouslySetInnerHTML={{ __html: html }} />;
 }
@@ -38,12 +69,15 @@ export function Today() {
     const s = stepsFor(m, p).find((x) => !x.done);
     if (s) { next = { m, s }; break; }
   }
-  const totalCards = available.reduce((n, m) => n + m.cards.length, 0);
+  const deck = deckStatus(p);
+  const toReview = deck.due.length + deck.fresh.length;
+  const days = streak(p);
 
   return (
     <div>
       <p class="eyebrow">{courseTitle}</p>
       <h1>Today</h1>
+      {days > 0 && <p class="streak">🔥 {days}-day streak{p.activity[today()] ? '' : ' (study today to keep it)'}</p>}
       {next ? (
         <a class="card hero" href={next.s.link}>
           <span class="tag">{next.m.title}</span>
@@ -54,9 +88,10 @@ export function Today() {
       ) : (
         <div class="card"><strong>You're up to date.</strong><p class="muted">The next module is on its way. Review your cards meanwhile.</p></div>
       )}
-      {totalCards > 0 && (
-        <a class="card row" href={href('cards')}>
-          <span>🗂️ Review flashcards</span><span class="muted">{totalCards} cards ›</span>
+      {deck.open.length > 0 && (
+        <a class={`card row ${toReview ? 'due' : ''}`} href={href('cards')}>
+          <span>🗂️ {toReview ? 'Review flashcards' : 'Flashcards: all caught up'}</span>
+          <span class="muted">{toReview ? `${deck.due.length} due · ${deck.fresh.length} new ›` : deck.next ? `next ${niceDate(deck.next)} ›` : '›'}</span>
         </a>
       )}
       <a class="card row" href={href('pack')}>
@@ -125,7 +160,7 @@ export function ModuleView({ id }: { id: string }) {
           </li>
         ))}
       </ul>
-      {m.cards.length > 0 && <a class="card row" href={href('cards', m.id)}><span>🗂️ Flashcards</span><span class="muted">{m.cards.length} ›</span></a>}
+      {m.cards.length > 0 && <a class="card row" href={href('cards', m.id)}><span>🗂️ Flashcards</span><span class="muted">{deckStatus(p, m.id).open.length}/{m.cards.length} unlocked ›</span></a>}
     </div>
   );
 }
@@ -142,6 +177,7 @@ export function LessonView({ id, slug }: { id: string; slug: string }) {
   const done = !!p.lessons[key];
   const nextLink = idx + 1 < m.lessons.length ? href('m', m.id, 'l', m.lessons[idx + 1].slug) : href('m', m.id, 'quiz');
   const nextLabel = idx + 1 < m.lessons.length ? 'Next lesson' : 'Take the quiz';
+  const note = p.notes[key] ?? '';
 
   return (
     <article>
@@ -149,11 +185,15 @@ export function LessonView({ id, slug }: { id: string; slug: string }) {
       <p class="eyebrow">Lesson {idx + 1} of {m.lessons.length}{lesson.minutes ? ` · ${lesson.minutes} min` : ''}</p>
       <h1>{lesson.title}</h1>
       <Prose html={lesson.html} />
+      <label class="field answer">Your answer
+        <textarea rows={4} value={note} placeholder="A few lines is enough. Saved only on this phone."
+          onInput={(e) => update((s) => { s.notes[key] = (e.target as HTMLTextAreaElement).value; })} />
+      </label>
       <div class="actions">
         {done ? (
           <a class="btn" href={nextLink}>{nextLabel} ›</a>
         ) : (
-          <button class="btn" onClick={() => { update((s) => { s.lessons[key] = new Date().toISOString(); }); location.hash = nextLink; }}>
+          <button class="btn" onClick={() => { update((s) => { s.lessons[key] = new Date().toISOString(); logActivity(s); }); location.hash = nextLink; }}>
             Mark complete · {nextLabel} ›
           </button>
         )}
@@ -194,7 +234,7 @@ export function QuizView({ id }: { id: string }) {
 
   const finish = () => {
     const score = answers.filter((a, k) => a === m.quiz[k].answer).length;
-    update((s) => { s.quiz[m.id] = { answers, score, total: m.quiz.length, at: new Date().toISOString() }; });
+    update((s) => { s.quiz[m.id] = { answers, score, total: m.quiz.length, at: new Date().toISOString() }; logActivity(s); });
     setRetake(false);
   };
 
@@ -243,7 +283,7 @@ export function LabView({ id }: { id: string }) {
       <div class="card">
         <label class="check">
           <input type="checkbox" checked={lab.done}
-            onChange={(e) => update((s) => { s.labs[m.id] = { ...lab, done: (e.target as HTMLInputElement).checked }; })} />
+            onChange={(e) => update((s) => { const done = (e.target as HTMLInputElement).checked; s.labs[m.id] = { ...lab, done }; if (done) logActivity(s); })} />
           Lab done
         </label>
         <label class="field">Notes and takeaway
@@ -278,53 +318,101 @@ export function MemoView({ id }: { id: string }) {
   );
 }
 
-/* ---------- Flashcards (simple practice; spaced repetition comes in phase 2) ---------- */
+/* ---------- Flashcards (spaced repetition) ---------- */
 
 export function CardsView({ id }: { id?: string }) {
-  const deck = useMemo(() => {
-    const src = (id ? modules.filter((m) => m.id === id) : modules.filter((m) => m.status === 'available'))
-      .flatMap((m) => m.cards.map((c, k) => ({ ...c, key: `${m.id}/${k}` })));
-    return src.sort(() => Math.random() - 0.5);
-  }, [id]);
-  const [queue, setQueue] = useState(deck);
+  const [p] = useProgress();
+  const [session, setSession] = useState<{ queue: Card[]; cram: boolean } | null>(null);
   const [flipped, setFlipped] = useState(false);
-  const [good, setGood] = useState(0);
+  const [reviewed, setReviewed] = useState(0);
+  const deck = deckStatus(p, id);
   const back = id ? href('m', id) : href();
+  const title = id ? `${getModule(id)?.title ?? ''}: flashcards` : 'Flashcards';
 
-  if (!queue.length) {
+  const start = (cram: boolean) => {
+    const queue = cram ? shuffle(deck.open) : [...shuffle(deck.due), ...deck.fresh];
+    setSession({ queue, cram }); setFlipped(false); setReviewed(0);
+  };
+
+  // Overview
+  if (!session) {
+    const toReview = deck.due.length + deck.fresh.length;
     return (
       <div>
-        <Back to={back} label="Back" />
-        <h1>Deck done</h1>
-        <div class="card"><strong>{good} cards reviewed.</strong><p class="muted">Come back tomorrow. Short, regular review beats one long cram.</p></div>
-        <div class="actions"><button class="btn secondary" onClick={() => { setQueue(deck); setGood(0); }}>Go again</button></div>
+        {id && <Back to={back} label="Back" />}
+        <h1>{title}</h1>
+        <div class="stats">
+          <div><strong>{deck.due.length}</strong><span>due</span></div>
+          <div><strong>{deck.fresh.length}</strong><span>new today</span></div>
+          <div><strong>{deck.studied}</strong><span>studied</span></div>
+          <div><strong>{deck.locked}</strong><span>locked</span></div>
+        </div>
+        {toReview > 0 ? (
+          <div class="actions"><button class="btn" onClick={() => start(false)}>Start review ({toReview})</button></div>
+        ) : (
+          <div class="card">
+            <strong>{deck.open.length ? 'All caught up.' : 'No cards yet.'}</strong>
+            <p class="muted">
+              {deck.open.length
+                ? deck.next ? `Next cards are due ${niceDate(deck.next)}.` : 'Come back tomorrow.'
+                : 'Cards unlock as you complete lessons.'}
+            </p>
+          </div>
+        )}
+        {deck.open.length > 0 && (
+          <div class="actions"><button class="btn secondary" onClick={() => start(true)}>Practise all unlocked cards (doesn't change schedule)</button></div>
+        )}
+        <p class="muted small">Cards come back just before you're likely to forget them. Up to {NEW_PER_DAY} new cards a day; locked cards open as you finish lessons.</p>
       </div>
     );
   }
-  const c = queue[0];
-  const answer = (ok: boolean) => {
-    if (ok) {
-      update((s) => { const r = s.cards[c.key] ?? { reviews: 0 }; s.cards[c.key] = { reviews: r.reviews + 1, lastGood: new Date().toISOString() }; });
-      setGood(good + 1);
-      setQueue(queue.slice(1));
-    } else {
-      setQueue([...queue.slice(1), c]);
-    }
+
+  // Session finished
+  if (!session.queue.length) {
+    return (
+      <div>
+        <h1>Session done</h1>
+        <div class="card"><strong>{reviewed} cards reviewed.</strong><p class="muted">Short, regular review beats one long cram.</p></div>
+        <div class="actions"><button class="btn" onClick={() => setSession(null)}>Done</button></div>
+      </div>
+    );
+  }
+
+  const c = session.queue[0];
+  const state = p.cards[c.key];
+  const grade = (g: Grade) => {
+    if (!session.cram) update((s) => { s.cards[c.key] = schedule(s.cards[c.key], g); logActivity(s); });
+    const rest = session.queue.slice(1);
+    setSession({ ...session, queue: g === 'again' ? [...rest, c] : rest });
+    if (g !== 'again') setReviewed(reviewed + 1);
     setFlipped(false);
   };
+  const grades: { g: Grade; label: string }[] = [
+    { g: 'again', label: 'Again' }, { g: 'hard', label: 'Hard' }, { g: 'good', label: 'Good' }, { g: 'easy', label: 'Easy' },
+  ];
   return (
     <div>
-      <Back to={back} label="Back" />
-      <p class="eyebrow">{queue.length} left</p>
+      <button class="back link" onClick={() => setSession(null)}>‹ End session</button>
+      <p class="eyebrow">{session.queue.length} left{session.cram ? ' · practice' : !state ? ' · new card' : ''}</p>
       <button class={`flash ${flipped ? 'flipped' : ''}`} onClick={() => setFlipped(!flipped)}>
         <span class="small muted">{flipped ? 'Answer' : 'Tap to reveal'}</span>
         <span class="flash-text">{flipped ? c.back : c.front}</span>
       </button>
       {flipped && (
-        <div class="actions two">
-          <button class="btn secondary" onClick={() => answer(false)}>Again</button>
-          <button class="btn" onClick={() => answer(true)}>Got it</button>
-        </div>
+        session.cram ? (
+          <div class="actions two">
+            <button class="btn secondary" onClick={() => grade('again')}>Again</button>
+            <button class="btn" onClick={() => grade('good')}>Got it</button>
+          </div>
+        ) : (
+          <div class="grades">
+            {grades.map(({ g, label }) => (
+              <button key={g} class={`grade ${g}`} onClick={() => grade(g)}>
+                {label}<span>{preview(state, g)}</span>
+              </button>
+            ))}
+          </div>
+        )
       )}
     </div>
   );

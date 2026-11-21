@@ -1,0 +1,43 @@
+cards:
+  - after: 1
+    front: Touch time vs elapsed time?
+    back: Touch time is active working hours. Elapsed time is calendar time from start to finish, mostly waiting in connection work.
+  - after: 1
+    front: What is flow efficiency?
+    back: Touch time divided by elapsed time. Usually low in connection work, because most time is spent waiting on reviews and decisions.
+  - after: 1
+    front: Value demand vs failure demand?
+    back: Value demand is work the customer wants. Failure demand is work caused by something not done right the first time.
+  - after: 1
+    front: Two stories an efficiency strategy needs?
+    back: Capacity (more projects per team) and speed (projects reach energisation sooner).
+  - after: 2
+    front: What does a value-stream map record per stage?
+    back: Inputs and outputs, who does it, touch time, wait time, rework loops and handoffs.
+  - after: 2
+    front: Five signals of opportunity on a value-stream map?
+    back: Repeated rework loops, long waits after handoffs, copy-and-transform work, searching, and the same task done different ways.
+  - after: 3
+    front: What makes a good task in the inventory?
+    back: Specific, repeatable, owned by a role, measurable.
+  - after: 3
+    front: The five categories of lost time?
+    back: Repetitive drafting, study and post-processing toil, review comment churn, coordination overhead, knowledge loss.
+  - after: 3
+    front: Why use at least two data sources for the inventory?
+    back: Each source is biased in its own way. Comparing them (e.g. timesheets vs interviews) shows where the picture is wrong.
+  - after: 4
+    front: The six scoring factors?
+    back: Volume, repeatability, checkability, data access, consequence (inverted), elapsed-time impact.
+  - after: 4
+    front: The priority formula?
+    back: (volume + elapsed-time impact) × (repeatability + checkability + data access + consequence).
+  - after: 4
+    front: What is the scoring model for?
+    back: Structuring the decision and making assumptions visible - not precision.
+  - after: 5
+    front: Four balances in an opportunity portfolio?
+    back: Quick wins vs bets, engineers vs grid leads, touch time vs elapsed time, AI vs non-AI fixes.
+  - after: 5
+    front: Why record a baseline before a pilot?
+    back: Without a "before" you can't show improvement or decide whether to scale.

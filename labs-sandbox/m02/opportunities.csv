@@ -1,0 +1,11 @@
+opportunity,task_codes,role,volume,repeatability,checkability,data_access,consequence,elapsed_impact,reason
+Standard plotting and results tables,POSTPROC-PLOTS,Power system engineer,,,,,,,
+First-draft study report sections,REPORT-DRAFT,Power system engineer,,,,,,,
+Batch study case setup,STUDY-SETUP,Power system engineer,,,,,,,
+Pre-submission consistency check (docs vs model vs cases),REPORT-DRAFT;MODEL-DEV,Power system engineer,,,,,,,
+First-draft technical comment responses,COMMENT-RESP,Power system engineer,,,,,,,
+Comment register workflow (classify/assign/track in Jira),COMMENT-REGISTER,Grid lead,,,,,,,
+Weekly status report drafting,STATUS-REPORT,Grid lead,,,,,,,
+Routine customer and TNSP correspondence drafts,CUST-COMMS;NSP-AEMO-COMMS,Grid lead,,,,,,,
+Searchable lessons learned from past comment rounds,KNOWLEDGE-SEARCH,Both,,,,,,,
+Meeting notes to actions,MEETINGS,Both,,,,,,,

@@ -1,0 +1,80 @@
+questions:
+  - scenario: Tom's study post-processing becomes 80% faster with a Copilot-written script. The R1 package still goes through three review rounds with three-week waits between them.
+    question: What has mainly improved?
+    options:
+      - Elapsed time to energisation.
+      - Touch time and team capacity, with little change to elapsed time.
+      - Both equally.
+      - Neither - plotting is not a real cost.
+    answer: 1
+    explanation: Faster post-processing cuts hours of work (capacity). Elapsed time is dominated by review rounds and waits, which this doesn't touch. Both stories matter, but they are different.
+
+  - scenario: A review round includes comments about unlabelled plots, a study case listed in the report but missing from the results, and model documentation that doesn't match the model.
+    question: What kind of demand are these?
+    options:
+      - Value demand - the customer asked for this work.
+      - External demand - outside the team's control.
+      - Failure demand - work caused by something not done right the first time.
+      - Strategic demand.
+    answer: 2
+    explanation: All three are self-inflicted and preventable. Failure demand is often the best place to target, because preventing it removes both the response work and a review round.
+
+  - scenario: You want to know where engineering time really goes. Timesheets only record project codes.
+    question: What's the most practical next step?
+    options:
+      - Two weeks of light tagging with a short list of task codes, plus a few short interviews to compare against.
+      - Detailed time-and-motion tracking for three months.
+      - Ask an AI assistant to estimate the breakdown from general industry knowledge.
+      - Skip measurement and start a pilot.
+    answer: 0
+    explanation: Light, time-boxed tagging plus a second source gives a usable picture without a lasting burden. An AI estimate from general knowledge is an ungrounded guess.
+
+  - scenario: You ask Copilot Chat, with the timesheet CSV attached, "What percentage of engineer time is plotting?" It answers "about 18%".
+    question: How should you treat that number?
+    options:
+      - Use it; the file was attached, so it's grounded.
+      - Average it with your own guess.
+      - Ask again to confirm.
+      - Have Copilot write a script that calculates it, check the script, and use the script's result.
+    answer: 3
+    explanation: Grounding helps the model read the data, but totals across hundreds of rows done "in its head" are unreliable. Code is checkable and repeatable.
+
+  - scenario: Two opportunities score the same. One automates replies to review comments; the other checks the package before submission to stop comments being raised.
+    question: Which factor is most likely to separate them?
+    options:
+      - Which one uses the newer AI model.
+      - Elapsed-time impact - preventing comments can remove a whole review round.
+      - Which one is easier to demo.
+      - Volume of text generated.
+    answer: 1
+    explanation: Preventing failure demand can remove whole review rounds and their waits, which moves dates. Replying faster mostly cuts touch time.
+
+  - scenario: A senior engineer argues that the scoring model is "made-up numbers".
+    question: What's the best response?
+    options:
+      - Add more factors and decimals until it's precise.
+      - Agree and drop the scoring.
+      - Explain that it structures the decision and makes assumptions visible; invite them to challenge specific scores.
+      - Let the AI assign all the scores to remove bias.
+    answer: 2
+    explanation: The model's value is transparency and a shared conversation, not precision. Inviting challenge on individual scores builds trust and improves the ranking.
+
+  - scenario: Your shortlist is all engineer-side automation. The grid leads see nothing in it for them.
+    question: What's the main risk?
+    options:
+      - None, if the numbers support it.
+      - Half the team disengages, and coordination waste - often a big driver of elapsed time - is left untouched.
+      - The AI tools will cost more.
+      - AEMO will object.
+    answer: 1
+    explanation: A portfolio should balance roles. Grid lead work - correspondence, registers, status - is a big share of coordination overhead and is well suited to workflows.
+
+  - scenario: You're about to start a pilot on the comment register workflow.
+    question: What must you do before it starts?
+    options:
+      - Record a baseline - e.g. cycle time from comments received to responses submitted, and hours per round.
+      - Buy a new tool.
+      - Train the whole team on prompt engineering.
+      - Nothing; improvements will be obvious.
+    answer: 0
+    explanation: Without a baseline you can't show improvement or decide whether to scale. Keep it light - one or two measures you can collect reliably.

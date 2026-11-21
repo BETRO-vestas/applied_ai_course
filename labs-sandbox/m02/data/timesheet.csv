@@ -1,0 +1,465 @@
+week,person,role,project_id,task_code,hours
+2026-W01,Mei,Power system engineer,P07,STUDY-SETUP,2.0
+2026-W01,Mei,Power system engineer,P01,STUDY-SETUP,2.0
+2026-W01,Mei,Power system engineer,P01,STUDY-RUN,2.5
+2026-W01,Mei,Power system engineer,P04,POSTPROC-PLOTS,6.0
+2026-W01,Mei,Power system engineer,P04,REPORT-DRAFT,2.5
+2026-W01,Mei,Power system engineer,P01,REPORT-DRAFT,2.5
+2026-W01,Mei,Power system engineer,P03,MODEL-DEV,4.5
+2026-W01,Mei,Power system engineer,P02,COMMENT-RESP,4.5
+2026-W01,Mei,Power system engineer,P07,DMAT,2.0
+2026-W01,Mei,Power system engineer,P03,COMPLIANCE-TEST,1.0
+2026-W01,Mei,Power system engineer,P02,COMPLIANCE-TEST,1.0
+2026-W01,Mei,Power system engineer,P07,COMPLIANCE-TEST,1.0
+2026-W01,Mei,Power system engineer,P05,KNOWLEDGE-SEARCH,1.0
+2026-W01,Mei,Power system engineer,P07,KNOWLEDGE-SEARCH,1.0
+2026-W01,Mei,Power system engineer,P03,MEETINGS,1.0
+2026-W01,Mei,Power system engineer,P07,MEETINGS,1.0
+2026-W01,Mei,Power system engineer,P04,ADMIN,0.5
+2026-W01,Mei,Power system engineer,P02,ADMIN,0.5
+2026-W01,Raj,Power system engineer,P04,STUDY-SETUP,2.0
+2026-W01,Raj,Power system engineer,P03,STUDY-SETUP,2.0
+2026-W01,Raj,Power system engineer,P03,STUDY-SETUP,2.0
+2026-W01,Raj,Power system engineer,P04,STUDY-RUN,2.0
+2026-W01,Raj,Power system engineer,P03,STUDY-RUN,2.0
+2026-W01,Raj,Power system engineer,P03,POSTPROC-PLOTS,7.0
+2026-W01,Raj,Power system engineer,P08,REPORT-DRAFT,2.5
+2026-W01,Raj,Power system engineer,P01,REPORT-DRAFT,2.5
+2026-W01,Raj,Power system engineer,P02,MODEL-DEV,5.5
+2026-W01,Raj,Power system engineer,P03,COMMENT-RESP,2.5
+2026-W01,Raj,Power system engineer,P06,COMMENT-RESP,2.5
+2026-W01,Raj,Power system engineer,P07,DMAT,1.0
+2026-W01,Raj,Power system engineer,P07,DMAT,1.0
+2026-W01,Raj,Power system engineer,P04,COMPLIANCE-TEST,0.5
+2026-W01,Raj,Power system engineer,P04,COMPLIANCE-TEST,0.5
+2026-W01,Raj,Power system engineer,P04,COMPLIANCE-TEST,0.5
+2026-W01,Raj,Power system engineer,P04,KNOWLEDGE-SEARCH,1.0
+2026-W01,Raj,Power system engineer,P02,KNOWLEDGE-SEARCH,1.0
+2026-W01,Raj,Power system engineer,P04,KNOWLEDGE-SEARCH,1.0
+2026-W01,Raj,Power system engineer,P01,MEETINGS,1.5
+2026-W01,Raj,Power system engineer,P02,MEETINGS,1.5
+2026-W01,Raj,Power system engineer,P07,ADMIN,1.0
+2026-W01,Elena,Power system engineer,P07,STUDY-SETUP,1.5
+2026-W01,Elena,Power system engineer,P06,STUDY-SETUP,1.5
+2026-W01,Elena,Power system engineer,P08,STUDY-SETUP,1.5
+2026-W01,Elena,Power system engineer,P04,STUDY-RUN,1.0
+2026-W01,Elena,Power system engineer,P01,STUDY-RUN,1.0
+2026-W01,Elena,Power system engineer,P06,STUDY-RUN,1.0
+2026-W01,Elena,Power system engineer,P07,POSTPROC-PLOTS,2.0
+2026-W01,Elena,Power system engineer,P02,POSTPROC-PLOTS,2.0
+2026-W01,Elena,Power system engineer,P07,POSTPROC-PLOTS,2.0
+2026-W01,Elena,Power system engineer,P05,REPORT-DRAFT,6.0
+2026-W01,Elena,Power system engineer,P02,MODEL-DEV,4.5
+2026-W01,Elena,Power system engineer,P06,COMMENT-RESP,4.5
+2026-W01,Elena,Power system engineer,P02,DMAT,0.5
+2026-W01,Elena,Power system engineer,P01,DMAT,0.5
+2026-W01,Elena,Power system engineer,P03,DMAT,0.5
+2026-W01,Elena,Power system engineer,P05,COMPLIANCE-TEST,2.0
+2026-W01,Elena,Power system engineer,P05,KNOWLEDGE-SEARCH,1.0
+2026-W01,Elena,Power system engineer,P02,KNOWLEDGE-SEARCH,1.0
+2026-W01,Elena,Power system engineer,P02,KNOWLEDGE-SEARCH,1.0
+2026-W01,Elena,Power system engineer,GEN,MEETINGS,2.0
+2026-W01,Elena,Power system engineer,P07,ADMIN,0.5
+2026-W01,Elena,Power system engineer,P08,ADMIN,0.5
+2026-W01,Elena,Power system engineer,P07,ADMIN,0.5
+2026-W01,Tom,Power system engineer,P02,STUDY-SETUP,1.5
+2026-W01,Tom,Power system engineer,P01,STUDY-SETUP,1.5
+2026-W01,Tom,Power system engineer,P05,STUDY-SETUP,1.5
+2026-W01,Tom,Power system engineer,P05,STUDY-RUN,2.5
+2026-W01,Tom,Power system engineer,P01,POSTPROC-PLOTS,7.5
+2026-W01,Tom,Power system engineer,P07,REPORT-DRAFT,6.5
+2026-W01,Tom,Power system engineer,P02,MODEL-DEV,2.0
+2026-W01,Tom,Power system engineer,P04,MODEL-DEV,2.0
+2026-W01,Tom,Power system engineer,P01,COMMENT-RESP,2.0
+2026-W01,Tom,Power system engineer,P01,COMMENT-RESP,2.0
+2026-W01,Tom,Power system engineer,P08,DMAT,1.0
+2026-W01,Tom,Power system engineer,P07,DMAT,1.0
+2026-W01,Tom,Power system engineer,P02,COMPLIANCE-TEST,1.0
+2026-W01,Tom,Power system engineer,P07,COMPLIANCE-TEST,1.0
+2026-W01,Tom,Power system engineer,P04,COMPLIANCE-TEST,1.0
+2026-W01,Tom,Power system engineer,P05,KNOWLEDGE-SEARCH,2.5
+2026-W01,Tom,Power system engineer,P02,MEETINGS,1.0
+2026-W01,Tom,Power system engineer,P04,MEETINGS,1.0
+2026-W01,Tom,Power system engineer,P01,ADMIN,0.5
+2026-W01,Tom,Power system engineer,P03,ADMIN,0.5
+2026-W01,Aisha,Grid lead,P01,CUST-COMMS,6.0
+2026-W01,Aisha,Grid lead,P05,NSP-AEMO-COMMS,1.5
+2026-W01,Aisha,Grid lead,P07,NSP-AEMO-COMMS,1.5
+2026-W01,Aisha,Grid lead,P01,NSP-AEMO-COMMS,1.5
+2026-W01,Aisha,Grid lead,P03,COMMENT-REGISTER,6.5
+2026-W01,Aisha,Grid lead,P04,STATUS-REPORT,2.0
+2026-W01,Aisha,Grid lead,P01,STATUS-REPORT,2.0
+2026-W01,Aisha,Grid lead,P06,STATUS-REPORT,2.0
+2026-W01,Aisha,Grid lead,P01,SCHEDULE-RISK,1.5
+2026-W01,Aisha,Grid lead,P05,SCHEDULE-RISK,1.5
+2026-W01,Aisha,Grid lead,P01,CONTRACT-REVIEW,1.0
+2026-W01,Aisha,Grid lead,P04,CONTRACT-REVIEW,1.0
+2026-W01,Aisha,Grid lead,P02,CONTRACT-REVIEW,1.0
+2026-W01,Aisha,Grid lead,P04,KNOWLEDGE-SEARCH,1.5
+2026-W01,Aisha,Grid lead,P03,MEETINGS,2.0
+2026-W01,Aisha,Grid lead,P07,MEETINGS,2.0
+2026-W01,Aisha,Grid lead,GEN,ADMIN,2.0
+2026-W01,Kofi,Grid lead,P01,CUST-COMMS,5.5
+2026-W01,Kofi,Grid lead,P03,NSP-AEMO-COMMS,2.0
+2026-W01,Kofi,Grid lead,P06,NSP-AEMO-COMMS,2.0
+2026-W01,Kofi,Grid lead,P01,NSP-AEMO-COMMS,2.0
+2026-W01,Kofi,Grid lead,P03,COMMENT-REGISTER,1.5
+2026-W01,Kofi,Grid lead,P03,COMMENT-REGISTER,1.5
+2026-W01,Kofi,Grid lead,P01,COMMENT-REGISTER,1.5
+2026-W01,Kofi,Grid lead,P05,STATUS-REPORT,2.0
+2026-W01,Kofi,Grid lead,P04,STATUS-REPORT,2.0
+2026-W01,Kofi,Grid lead,P07,STATUS-REPORT,2.0
+2026-W01,Kofi,Grid lead,P02,SCHEDULE-RISK,2.0
+2026-W01,Kofi,Grid lead,P06,SCHEDULE-RISK,2.0
+2026-W01,Kofi,Grid lead,P03,CONTRACT-REVIEW,2.5
+2026-W01,Kofi,Grid lead,P07,KNOWLEDGE-SEARCH,0.5
+2026-W01,Kofi,Grid lead,P03,KNOWLEDGE-SEARCH,0.5
+2026-W01,Kofi,Grid lead,P07,KNOWLEDGE-SEARCH,0.5
+2026-W01,Kofi,Grid lead,GEN,MEETINGS,4.5
+2026-W01,Kofi,Grid lead,GEN,ADMIN,2.0
+2026-W02,Mei,Power system engineer,P03,STUDY-SETUP,3.0
+2026-W02,Mei,Power system engineer,P04,STUDY-SETUP,3.0
+2026-W02,Mei,Power system engineer,P01,STUDY-RUN,2.5
+2026-W02,Mei,Power system engineer,P01,POSTPROC-PLOTS,2.5
+2026-W02,Mei,Power system engineer,P07,POSTPROC-PLOTS,2.5
+2026-W02,Mei,Power system engineer,P07,POSTPROC-PLOTS,2.5
+2026-W02,Mei,Power system engineer,P07,REPORT-DRAFT,5.5
+2026-W02,Mei,Power system engineer,P07,MODEL-DEV,3.0
+2026-W02,Mei,Power system engineer,P04,MODEL-DEV,3.0
+2026-W02,Mei,Power system engineer,P06,COMMENT-RESP,2.0
+2026-W02,Mei,Power system engineer,P04,COMMENT-RESP,2.0
+2026-W02,Mei,Power system engineer,P05,DMAT,1.0
+2026-W02,Mei,Power system engineer,P03,DMAT,1.0
+2026-W02,Mei,Power system engineer,P08,COMPLIANCE-TEST,1.5
+2026-W02,Mei,Power system engineer,P04,COMPLIANCE-TEST,1.5
+2026-W02,Mei,Power system engineer,P04,KNOWLEDGE-SEARCH,3.0
+2026-W02,Mei,Power system engineer,GEN,MEETINGS,2.0
+2026-W02,Mei,Power system engineer,GEN,ADMIN,1.5
+2026-W02,Raj,Power system engineer,P06,STUDY-SETUP,4.0
+2026-W02,Raj,Power system engineer,P01,STUDY-RUN,1.5
+2026-W02,Raj,Power system engineer,P08,STUDY-RUN,1.5
+2026-W02,Raj,Power system engineer,P08,POSTPROC-PLOTS,2.5
+2026-W02,Raj,Power system engineer,P02,POSTPROC-PLOTS,2.5
+2026-W02,Raj,Power system engineer,P02,REPORT-DRAFT,4.0
+2026-W02,Raj,Power system engineer,P02,MODEL-DEV,2.5
+2026-W02,Raj,Power system engineer,P04,MODEL-DEV,2.5
+2026-W02,Raj,Power system engineer,P05,COMMENT-RESP,2.5
+2026-W02,Raj,Power system engineer,P05,COMMENT-RESP,2.5
+2026-W02,Raj,Power system engineer,P07,DMAT,1.5
+2026-W02,Raj,Power system engineer,P03,COMPLIANCE-TEST,1.0
+2026-W02,Raj,Power system engineer,P03,COMPLIANCE-TEST,1.0
+2026-W02,Raj,Power system engineer,P05,COMPLIANCE-TEST,1.0
+2026-W02,Raj,Power system engineer,P02,KNOWLEDGE-SEARCH,1.5
+2026-W02,Raj,Power system engineer,P03,KNOWLEDGE-SEARCH,1.5
+2026-W02,Raj,Power system engineer,GEN,MEETINGS,2.0
+2026-W02,Raj,Power system engineer,GEN,ADMIN,1.5
+2026-W02,Elena,Power system engineer,P01,STUDY-SETUP,2.0
+2026-W02,Elena,Power system engineer,P02,STUDY-SETUP,2.0
+2026-W02,Elena,Power system engineer,P07,STUDY-RUN,1.5
+2026-W02,Elena,Power system engineer,P03,STUDY-RUN,1.5
+2026-W02,Elena,Power system engineer,P06,POSTPROC-PLOTS,3.0
+2026-W02,Elena,Power system engineer,P05,POSTPROC-PLOTS,3.0
+2026-W02,Elena,Power system engineer,P01,REPORT-DRAFT,4.5
+2026-W02,Elena,Power system engineer,P03,MODEL-DEV,5.0
+2026-W02,Elena,Power system engineer,P01,COMMENT-RESP,6.0
+2026-W02,Elena,Power system engineer,P07,DMAT,1.0
+2026-W02,Elena,Power system engineer,P05,DMAT,1.0
+2026-W02,Elena,Power system engineer,P05,COMPLIANCE-TEST,1.0
+2026-W02,Elena,Power system engineer,P05,COMPLIANCE-TEST,1.0
+2026-W02,Elena,Power system engineer,P03,KNOWLEDGE-SEARCH,1.0
+2026-W02,Elena,Power system engineer,P07,KNOWLEDGE-SEARCH,1.0
+2026-W02,Elena,Power system engineer,P07,KNOWLEDGE-SEARCH,1.0
+2026-W02,Elena,Power system engineer,GEN,MEETINGS,2.0
+2026-W02,Elena,Power system engineer,P04,ADMIN,0.5
+2026-W02,Elena,Power system engineer,P01,ADMIN,0.5
+2026-W02,Tom,Power system engineer,P07,STUDY-SETUP,5.5
+2026-W02,Tom,Power system engineer,P02,STUDY-RUN,1.0
+2026-W02,Tom,Power system engineer,P07,STUDY-RUN,1.0
+2026-W02,Tom,Power system engineer,P05,STUDY-RUN,1.0
+2026-W02,Tom,Power system engineer,P07,POSTPROC-PLOTS,2.5
+2026-W02,Tom,Power system engineer,P07,POSTPROC-PLOTS,2.5
+2026-W02,Tom,Power system engineer,P01,REPORT-DRAFT,2.5
+2026-W02,Tom,Power system engineer,P03,REPORT-DRAFT,2.5
+2026-W02,Tom,Power system engineer,P02,MODEL-DEV,1.5
+2026-W02,Tom,Power system engineer,P07,MODEL-DEV,1.5
+2026-W02,Tom,Power system engineer,P06,MODEL-DEV,1.5
+2026-W02,Tom,Power system engineer,P04,COMMENT-RESP,1.5
+2026-W02,Tom,Power system engineer,P02,COMMENT-RESP,1.5
+2026-W02,Tom,Power system engineer,P06,COMMENT-RESP,1.5
+2026-W02,Tom,Power system engineer,P03,DMAT,2.0
+2026-W02,Tom,Power system engineer,P01,COMPLIANCE-TEST,1.5
+2026-W02,Tom,Power system engineer,P03,COMPLIANCE-TEST,1.5
+2026-W02,Tom,Power system engineer,P05,KNOWLEDGE-SEARCH,1.0
+2026-W02,Tom,Power system engineer,P01,KNOWLEDGE-SEARCH,1.0
+2026-W02,Tom,Power system engineer,P06,MEETINGS,0.5
+2026-W02,Tom,Power system engineer,P01,MEETINGS,0.5
+2026-W02,Tom,Power system engineer,P02,MEETINGS,0.5
+2026-W02,Tom,Power system engineer,GEN,ADMIN,1.0
+2026-W02,Aisha,Grid lead,P02,CUST-COMMS,2.0
+2026-W02,Aisha,Grid lead,P04,CUST-COMMS,2.0
+2026-W02,Aisha,Grid lead,P01,CUST-COMMS,2.0
+2026-W02,Aisha,Grid lead,P07,NSP-AEMO-COMMS,2.0
+2026-W02,Aisha,Grid lead,P05,NSP-AEMO-COMMS,2.0
+2026-W02,Aisha,Grid lead,P01,NSP-AEMO-COMMS,2.0
+2026-W02,Aisha,Grid lead,P06,COMMENT-REGISTER,1.5
+2026-W02,Aisha,Grid lead,P08,COMMENT-REGISTER,1.5
+2026-W02,Aisha,Grid lead,P05,COMMENT-REGISTER,1.5
+2026-W02,Aisha,Grid lead,P06,STATUS-REPORT,2.5
+2026-W02,Aisha,Grid lead,P06,STATUS-REPORT,2.5
+2026-W02,Aisha,Grid lead,P02,SCHEDULE-RISK,2.0
+2026-W02,Aisha,Grid lead,P06,SCHEDULE-RISK,2.0
+2026-W02,Aisha,Grid lead,P01,CONTRACT-REVIEW,1.5
+2026-W02,Aisha,Grid lead,P01,CONTRACT-REVIEW,1.5
+2026-W02,Aisha,Grid lead,P01,KNOWLEDGE-SEARCH,0.5
+2026-W02,Aisha,Grid lead,P07,KNOWLEDGE-SEARCH,0.5
+2026-W02,Aisha,Grid lead,P07,KNOWLEDGE-SEARCH,0.5
+2026-W02,Aisha,Grid lead,GEN,MEETINGS,5.0
+2026-W02,Aisha,Grid lead,P08,ADMIN,1.0
+2026-W02,Aisha,Grid lead,P04,ADMIN,1.0
+2026-W02,Kofi,Grid lead,P04,CUST-COMMS,3.0
+2026-W02,Kofi,Grid lead,P01,CUST-COMMS,3.0
+2026-W02,Kofi,Grid lead,P04,NSP-AEMO-COMMS,2.5
+2026-W02,Kofi,Grid lead,P07,NSP-AEMO-COMMS,2.5
+2026-W02,Kofi,Grid lead,P07,COMMENT-REGISTER,2.5
+2026-W02,Kofi,Grid lead,P07,COMMENT-REGISTER,2.5
+2026-W02,Kofi,Grid lead,P04,STATUS-REPORT,1.5
+2026-W02,Kofi,Grid lead,P03,STATUS-REPORT,1.5
+2026-W02,Kofi,Grid lead,P07,STATUS-REPORT,1.5
+2026-W02,Kofi,Grid lead,P03,SCHEDULE-RISK,1.5
+2026-W02,Kofi,Grid lead,P03,SCHEDULE-RISK,1.5
+2026-W02,Kofi,Grid lead,P07,CONTRACT-REVIEW,2.5
+2026-W02,Kofi,Grid lead,P05,KNOWLEDGE-SEARCH,0.5
+2026-W02,Kofi,Grid lead,P02,KNOWLEDGE-SEARCH,0.5
+2026-W02,Kofi,Grid lead,P01,KNOWLEDGE-SEARCH,0.5
+2026-W02,Kofi,Grid lead,GEN,MEETINGS,4.0
+2026-W02,Kofi,Grid lead,P07,ADMIN,0.5
+2026-W02,Kofi,Grid lead,P02,ADMIN,0.5
+2026-W02,Kofi,Grid lead,P01,ADMIN,0.5
+2026-W03,Mei,Power system engineer,P07,STUDY-SETUP,2.5
+2026-W03,Mei,Power system engineer,P07,STUDY-SETUP,2.5
+2026-W03,Mei,Power system engineer,P04,STUDY-RUN,3.5
+2026-W03,Mei,Power system engineer,P07,POSTPROC-PLOTS,2.5
+2026-W03,Mei,Power system engineer,P03,POSTPROC-PLOTS,2.5
+2026-W03,Mei,Power system engineer,P02,REPORT-DRAFT,2.5
+2026-W03,Mei,Power system engineer,P07,REPORT-DRAFT,2.5
+2026-W03,Mei,Power system engineer,P05,MODEL-DEV,2.5
+2026-W03,Mei,Power system engineer,P02,MODEL-DEV,2.5
+2026-W03,Mei,Power system engineer,P01,COMMENT-RESP,4.0
+2026-W03,Mei,Power system engineer,P02,DMAT,1.5
+2026-W03,Mei,Power system engineer,P06,COMPLIANCE-TEST,1.5
+2026-W03,Mei,Power system engineer,P01,COMPLIANCE-TEST,1.5
+2026-W03,Mei,Power system engineer,P06,KNOWLEDGE-SEARCH,2.0
+2026-W03,Mei,Power system engineer,P02,MEETINGS,1.0
+2026-W03,Mei,Power system engineer,P04,MEETINGS,1.0
+2026-W03,Mei,Power system engineer,P01,MEETINGS,1.0
+2026-W03,Mei,Power system engineer,P02,ADMIN,1.0
+2026-W03,Raj,Power system engineer,P03,STUDY-SETUP,2.0
+2026-W03,Raj,Power system engineer,P01,STUDY-SETUP,2.0
+2026-W03,Raj,Power system engineer,P04,STUDY-SETUP,2.0
+2026-W03,Raj,Power system engineer,P08,STUDY-RUN,1.5
+2026-W03,Raj,Power system engineer,P05,STUDY-RUN,1.5
+2026-W03,Raj,Power system engineer,P08,POSTPROC-PLOTS,2.5
+2026-W03,Raj,Power system engineer,P03,POSTPROC-PLOTS,2.5
+2026-W03,Raj,Power system engineer,P04,POSTPROC-PLOTS,2.5
+2026-W03,Raj,Power system engineer,P03,REPORT-DRAFT,3.0
+2026-W03,Raj,Power system engineer,P02,REPORT-DRAFT,3.0
+2026-W03,Raj,Power system engineer,P03,MODEL-DEV,4.5
+2026-W03,Raj,Power system engineer,P03,COMMENT-RESP,5.5
+2026-W03,Raj,Power system engineer,P07,DMAT,0.5
+2026-W03,Raj,Power system engineer,P03,DMAT,0.5
+2026-W03,Raj,Power system engineer,P03,DMAT,0.5
+2026-W03,Raj,Power system engineer,P01,COMPLIANCE-TEST,2.0
+2026-W03,Raj,Power system engineer,P04,KNOWLEDGE-SEARCH,1.5
+2026-W03,Raj,Power system engineer,P02,KNOWLEDGE-SEARCH,1.5
+2026-W03,Raj,Power system engineer,GEN,MEETINGS,2.0
+2026-W03,Raj,Power system engineer,GEN,ADMIN,1.5
+2026-W03,Elena,Power system engineer,P04,STUDY-SETUP,2.0
+2026-W03,Elena,Power system engineer,P07,STUDY-SETUP,2.0
+2026-W03,Elena,Power system engineer,P03,STUDY-RUN,1.0
+2026-W03,Elena,Power system engineer,P04,STUDY-RUN,1.0
+2026-W03,Elena,Power system engineer,P06,STUDY-RUN,1.0
+2026-W03,Elena,Power system engineer,P01,POSTPROC-PLOTS,8.0
+2026-W03,Elena,Power system engineer,P01,REPORT-DRAFT,4.5
+2026-W03,Elena,Power system engineer,P07,MODEL-DEV,4.5
+2026-W03,Elena,Power system engineer,P07,COMMENT-RESP,5.5
+2026-W03,Elena,Power system engineer,P07,DMAT,1.0
+2026-W03,Elena,Power system engineer,P03,DMAT,1.0
+2026-W03,Elena,Power system engineer,P01,DMAT,1.0
+2026-W03,Elena,Power system engineer,P07,COMPLIANCE-TEST,2.0
+2026-W03,Elena,Power system engineer,P07,KNOWLEDGE-SEARCH,1.0
+2026-W03,Elena,Power system engineer,P06,KNOWLEDGE-SEARCH,1.0
+2026-W03,Elena,Power system engineer,P03,MEETINGS,2.5
+2026-W03,Elena,Power system engineer,P01,ADMIN,0.5
+2026-W03,Elena,Power system engineer,P05,ADMIN,0.5
+2026-W03,Tom,Power system engineer,P02,STUDY-SETUP,2.5
+2026-W03,Tom,Power system engineer,P08,STUDY-SETUP,2.5
+2026-W03,Tom,Power system engineer,P04,STUDY-RUN,1.0
+2026-W03,Tom,Power system engineer,P07,STUDY-RUN,1.0
+2026-W03,Tom,Power system engineer,P08,STUDY-RUN,1.0
+2026-W03,Tom,Power system engineer,P02,POSTPROC-PLOTS,3.5
+2026-W03,Tom,Power system engineer,P08,POSTPROC-PLOTS,3.5
+2026-W03,Tom,Power system engineer,P01,REPORT-DRAFT,6.5
+2026-W03,Tom,Power system engineer,P03,MODEL-DEV,2.5
+2026-W03,Tom,Power system engineer,P07,MODEL-DEV,2.5
+2026-W03,Tom,Power system engineer,P07,COMMENT-RESP,1.5
+2026-W03,Tom,Power system engineer,P08,COMMENT-RESP,1.5
+2026-W03,Tom,Power system engineer,P01,COMMENT-RESP,1.5
+2026-W03,Tom,Power system engineer,P01,DMAT,1.0
+2026-W03,Tom,Power system engineer,P07,DMAT,1.0
+2026-W03,Tom,Power system engineer,P01,COMPLIANCE-TEST,2.5
+2026-W03,Tom,Power system engineer,P04,KNOWLEDGE-SEARCH,1.0
+2026-W03,Tom,Power system engineer,P03,KNOWLEDGE-SEARCH,1.0
+2026-W03,Tom,Power system engineer,P01,MEETINGS,1.0
+2026-W03,Tom,Power system engineer,P02,MEETINGS,1.0
+2026-W03,Tom,Power system engineer,GEN,ADMIN,1.5
+2026-W03,Aisha,Grid lead,P02,CUST-COMMS,3.5
+2026-W03,Aisha,Grid lead,P05,CUST-COMMS,3.5
+2026-W03,Aisha,Grid lead,P07,NSP-AEMO-COMMS,3.5
+2026-W03,Aisha,Grid lead,P07,NSP-AEMO-COMMS,3.5
+2026-W03,Aisha,Grid lead,P01,COMMENT-REGISTER,4.0
+2026-W03,Aisha,Grid lead,P01,COMMENT-REGISTER,4.0
+2026-W03,Aisha,Grid lead,P07,STATUS-REPORT,1.5
+2026-W03,Aisha,Grid lead,P02,STATUS-REPORT,1.5
+2026-W03,Aisha,Grid lead,P06,STATUS-REPORT,1.5
+2026-W03,Aisha,Grid lead,P02,SCHEDULE-RISK,2.5
+2026-W03,Aisha,Grid lead,P01,SCHEDULE-RISK,2.5
+2026-W03,Aisha,Grid lead,P07,CONTRACT-REVIEW,1.0
+2026-W03,Aisha,Grid lead,P02,CONTRACT-REVIEW,1.0
+2026-W03,Aisha,Grid lead,P04,CONTRACT-REVIEW,1.0
+2026-W03,Aisha,Grid lead,P03,KNOWLEDGE-SEARCH,1.0
+2026-W03,Aisha,Grid lead,P05,KNOWLEDGE-SEARCH,1.0
+2026-W03,Aisha,Grid lead,P01,MEETINGS,6.0
+2026-W03,Aisha,Grid lead,P03,ADMIN,1.0
+2026-W03,Aisha,Grid lead,P07,ADMIN,1.0
+2026-W03,Kofi,Grid lead,P01,CUST-COMMS,6.5
+2026-W03,Kofi,Grid lead,P03,NSP-AEMO-COMMS,2.5
+2026-W03,Kofi,Grid lead,P01,NSP-AEMO-COMMS,2.5
+2026-W03,Kofi,Grid lead,P05,NSP-AEMO-COMMS,2.5
+2026-W03,Kofi,Grid lead,P04,COMMENT-REGISTER,2.5
+2026-W03,Kofi,Grid lead,P03,COMMENT-REGISTER,2.5
+2026-W03,Kofi,Grid lead,P07,COMMENT-REGISTER,2.5
+2026-W03,Kofi,Grid lead,P03,STATUS-REPORT,1.5
+2026-W03,Kofi,Grid lead,P02,STATUS-REPORT,1.5
+2026-W03,Kofi,Grid lead,P07,STATUS-REPORT,1.5
+2026-W03,Kofi,Grid lead,P02,SCHEDULE-RISK,1.0
+2026-W03,Kofi,Grid lead,P02,SCHEDULE-RISK,1.0
+2026-W03,Kofi,Grid lead,P07,SCHEDULE-RISK,1.0
+2026-W03,Kofi,Grid lead,P07,CONTRACT-REVIEW,3.0
+2026-W03,Kofi,Grid lead,P07,KNOWLEDGE-SEARCH,1.5
+2026-W03,Kofi,Grid lead,GEN,MEETINGS,4.5
+2026-W03,Kofi,Grid lead,GEN,ADMIN,2.0
+2026-W04,Mei,Power system engineer,P01,STUDY-SETUP,2.0
+2026-W04,Mei,Power system engineer,P07,STUDY-SETUP,2.0
+2026-W04,Mei,Power system engineer,P04,STUDY-SETUP,2.0
+2026-W04,Mei,Power system engineer,P04,STUDY-RUN,3.5
+2026-W04,Mei,Power system engineer,P04,POSTPROC-PLOTS,8.0
+2026-W04,Mei,Power system engineer,P05,REPORT-DRAFT,2.5
+2026-W04,Mei,Power system engineer,P02,REPORT-DRAFT,2.5
+2026-W04,Mei,Power system engineer,P04,MODEL-DEV,1.5
+2026-W04,Mei,Power system engineer,P04,MODEL-DEV,1.5
+2026-W04,Mei,Power system engineer,P06,MODEL-DEV,1.5
+2026-W04,Mei,Power system engineer,P06,COMMENT-RESP,1.5
+2026-W04,Mei,Power system engineer,P04,COMMENT-RESP,1.5
+2026-W04,Mei,Power system engineer,P05,COMMENT-RESP,1.5
+2026-W04,Mei,Power system engineer,P07,DMAT,2.5
+2026-W04,Mei,Power system engineer,P01,COMPLIANCE-TEST,2.0
+2026-W04,Mei,Power system engineer,P06,KNOWLEDGE-SEARCH,0.5
+2026-W04,Mei,Power system engineer,P06,KNOWLEDGE-SEARCH,0.5
+2026-W04,Mei,Power system engineer,P07,KNOWLEDGE-SEARCH,0.5
+2026-W04,Mei,Power system engineer,GEN,MEETINGS,2.5
+2026-W04,Mei,Power system engineer,GEN,ADMIN,1.0
+2026-W04,Raj,Power system engineer,P08,STUDY-SETUP,5.0
+2026-W04,Raj,Power system engineer,P04,STUDY-RUN,3.5
+2026-W04,Raj,Power system engineer,P08,POSTPROC-PLOTS,2.0
+2026-W04,Raj,Power system engineer,P07,POSTPROC-PLOTS,2.0
+2026-W04,Raj,Power system engineer,P02,POSTPROC-PLOTS,2.0
+2026-W04,Raj,Power system engineer,P01,REPORT-DRAFT,1.5
+2026-W04,Raj,Power system engineer,P07,REPORT-DRAFT,1.5
+2026-W04,Raj,Power system engineer,P07,REPORT-DRAFT,1.5
+2026-W04,Raj,Power system engineer,P04,MODEL-DEV,4.0
+2026-W04,Raj,Power system engineer,P03,COMMENT-RESP,1.5
+2026-W04,Raj,Power system engineer,P04,COMMENT-RESP,1.5
+2026-W04,Raj,Power system engineer,P08,COMMENT-RESP,1.5
+2026-W04,Raj,Power system engineer,P03,DMAT,1.0
+2026-W04,Raj,Power system engineer,P07,DMAT,1.0
+2026-W04,Raj,Power system engineer,P04,COMPLIANCE-TEST,1.5
+2026-W04,Raj,Power system engineer,P05,COMPLIANCE-TEST,1.5
+2026-W04,Raj,Power system engineer,P07,KNOWLEDGE-SEARCH,1.0
+2026-W04,Raj,Power system engineer,P07,KNOWLEDGE-SEARCH,1.0
+2026-W04,Raj,Power system engineer,P02,KNOWLEDGE-SEARCH,1.0
+2026-W04,Raj,Power system engineer,GEN,MEETINGS,2.0
+2026-W04,Raj,Power system engineer,P01,ADMIN,0.5
+2026-W04,Raj,Power system engineer,P04,ADMIN,0.5
+2026-W04,Elena,Power system engineer,P04,STUDY-SETUP,6.0
+2026-W04,Elena,Power system engineer,P03,STUDY-RUN,3.5
+2026-W04,Elena,Power system engineer,P01,POSTPROC-PLOTS,4.0
+2026-W04,Elena,Power system engineer,P01,POSTPROC-PLOTS,4.0
+2026-W04,Elena,Power system engineer,P05,REPORT-DRAFT,2.0
+2026-W04,Elena,Power system engineer,P05,REPORT-DRAFT,2.0
+2026-W04,Elena,Power system engineer,P07,REPORT-DRAFT,2.0
+2026-W04,Elena,Power system engineer,P04,MODEL-DEV,2.5
+2026-W04,Elena,Power system engineer,P03,MODEL-DEV,2.5
+2026-W04,Elena,Power system engineer,P03,COMMENT-RESP,2.0
+2026-W04,Elena,Power system engineer,P07,COMMENT-RESP,2.0
+2026-W04,Elena,Power system engineer,P01,DMAT,1.0
+2026-W04,Elena,Power system engineer,P03,DMAT,1.0
+2026-W04,Elena,Power system engineer,P03,COMPLIANCE-TEST,2.0
+2026-W04,Elena,Power system engineer,P07,KNOWLEDGE-SEARCH,1.0
+2026-W04,Elena,Power system engineer,P02,KNOWLEDGE-SEARCH,1.0
+2026-W04,Elena,Power system engineer,P01,KNOWLEDGE-SEARCH,1.0
+2026-W04,Elena,Power system engineer,P04,MEETINGS,1.0
+2026-W04,Elena,Power system engineer,P03,MEETINGS,1.0
+2026-W04,Elena,Power system engineer,P03,MEETINGS,1.0
+2026-W04,Elena,Power system engineer,GEN,ADMIN,1.5
+2026-W04,Tom,Power system engineer,P01,STUDY-SETUP,2.0
+2026-W04,Tom,Power system engineer,P02,STUDY-SETUP,2.0
+2026-W04,Tom,Power system engineer,P01,STUDY-RUN,2.5
+2026-W04,Tom,Power system engineer,P01,POSTPROC-PLOTS,5.5
+2026-W04,Tom,Power system engineer,P03,REPORT-DRAFT,2.0
+2026-W04,Tom,Power system engineer,P01,REPORT-DRAFT,2.0
+2026-W04,Tom,Power system engineer,P04,REPORT-DRAFT,2.0
+2026-W04,Tom,Power system engineer,P02,MODEL-DEV,1.5
+2026-W04,Tom,Power system engineer,P01,MODEL-DEV,1.5
+2026-W04,Tom,Power system engineer,P07,MODEL-DEV,1.5
+2026-W04,Tom,Power system engineer,P07,COMMENT-RESP,6.0
+2026-W04,Tom,Power system engineer,P05,DMAT,1.0
+2026-W04,Tom,Power system engineer,P01,DMAT,1.0
+2026-W04,Tom,Power system engineer,P04,COMPLIANCE-TEST,0.5
+2026-W04,Tom,Power system engineer,P05,COMPLIANCE-TEST,0.5
+2026-W04,Tom,Power system engineer,P01,COMPLIANCE-TEST,0.5
+2026-W04,Tom,Power system engineer,P07,KNOWLEDGE-SEARCH,3.0
+2026-W04,Tom,Power system engineer,GEN,MEETINGS,3.0
+2026-W04,Tom,Power system engineer,GEN,ADMIN,1.5
+2026-W04,Aisha,Grid lead,P07,CUST-COMMS,2.5
+2026-W04,Aisha,Grid lead,P05,CUST-COMMS,2.5
+2026-W04,Aisha,Grid lead,P03,CUST-COMMS,2.5
+2026-W04,Aisha,Grid lead,P07,NSP-AEMO-COMMS,2.5
+2026-W04,Aisha,Grid lead,P07,NSP-AEMO-COMMS,2.5
+2026-W04,Aisha,Grid lead,P01,COMMENT-REGISTER,6.0
+2026-W04,Aisha,Grid lead,P02,STATUS-REPORT,4.0
+2026-W04,Aisha,Grid lead,P02,SCHEDULE-RISK,1.0
+2026-W04,Aisha,Grid lead,P06,SCHEDULE-RISK,1.0
+2026-W04,Aisha,Grid lead,P08,SCHEDULE-RISK,1.0
+2026-W04,Aisha,Grid lead,P03,CONTRACT-REVIEW,1.0
+2026-W04,Aisha,Grid lead,P01,CONTRACT-REVIEW,1.0
+2026-W04,Aisha,Grid lead,P03,CONTRACT-REVIEW,1.0
+2026-W04,Aisha,Grid lead,P01,KNOWLEDGE-SEARCH,0.5
+2026-W04,Aisha,Grid lead,P05,KNOWLEDGE-SEARCH,0.5
+2026-W04,Aisha,Grid lead,P07,MEETINGS,2.0
+2026-W04,Aisha,Grid lead,P04,MEETINGS,2.0
+2026-W04,Aisha,Grid lead,P07,MEETINGS,2.0
+2026-W04,Aisha,Grid lead,GEN,ADMIN,1.5
+2026-W04,Kofi,Grid lead,P01,CUST-COMMS,2.0
+2026-W04,Kofi,Grid lead,P05,CUST-COMMS,2.0
+2026-W04,Kofi,Grid lead,P05,CUST-COMMS,2.0
+2026-W04,Kofi,Grid lead,P04,NSP-AEMO-COMMS,6.0
+2026-W04,Kofi,Grid lead,P08,COMMENT-REGISTER,6.0
+2026-W04,Kofi,Grid lead,P04,STATUS-REPORT,1.5
+2026-W04,Kofi,Grid lead,P03,STATUS-REPORT,1.5
+2026-W04,Kofi,Grid lead,P01,STATUS-REPORT,1.5
+2026-W04,Kofi,Grid lead,P01,SCHEDULE-RISK,3.5
+2026-W04,Kofi,Grid lead,P04,CONTRACT-REVIEW,3.0
+2026-W04,Kofi,Grid lead,P03,KNOWLEDGE-SEARCH,1.0
+2026-W04,Kofi,Grid lead,P01,KNOWLEDGE-SEARCH,1.0
+2026-W04,Kofi,Grid lead,GEN,MEETINGS,4.5
+2026-W04,Kofi,Grid lead,GEN,ADMIN,2.5

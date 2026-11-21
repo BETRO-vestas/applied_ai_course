@@ -6,9 +6,10 @@ modules:
     summary: How LLMs work, why they confidently invent clause numbers, and what "agentic" really means.
     status: available
   - id: m02
+    dir: m02-mapping
     title: Mapping the team's work
     summary: Value-stream map the connection lifecycle and score where AI can help.
-    status: coming
+    status: available
   - id: m03
     title: Copilot for study automation
     summary: Agent-assisted Python for batch studies, post-processing and GPS checks.

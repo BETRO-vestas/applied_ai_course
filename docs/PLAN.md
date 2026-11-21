@@ -75,14 +75,14 @@ Each module has **5 micro-lessons**, a **scenario quiz**, **flashcards**,
 
 | # | Module | Key ideas | Lab (VS Code + Copilot, synthetic data) |
 |---|---|---|---|
-| 1 | **AI foundations through a grid lens** | How LLMs work; why they confidently invent clause numbers and parameter values; context windows; workflows vs agents; what "agentic" really means | Ask Copilot to summarise S5.2.5.13 requirements from the public NER text, then from memory alone. Compare the two answers clause by clause. |
-| 2 | **Mapping the team's work** | Value-stream mapping of the connection lifecycle; sizing the time spent per stage; scoring automation candidates by repeatability, risk, data access and value | Use Copilot to build a task inventory and scoring matrix from a synthetic timesheet and project list, then rank the top 10 opportunities. |
-| 3 | **Copilot for study automation** (engineer focus) | Agent-assisted Python for batch studies and post-processing; encoding team conventions in custom instructions; automated GPS pass/fail checks such as rise and settling time, FRT and reactive power capability | From synthetic step-response and fault-ride-through CSVs, have Copilot agent mode build a checker against fictional GPS limits, with plots and a summary table. Review the code like a lead engineer would. |
-| 4 | **Requirements, documents and knowledge** | Retrieval (RAG) explained simply; building traceability from NER clause to GPS to study to evidence; using SharePoint and Confluence through MCP; keeping knowledge between projects | Build a clause → requirement → evidence matrix for a fictional project, using prompt files plus M365/Confluence MCP against a sandbox space. |
-| 5 | **Agentic workflows for grid leads** | Meeting notes → actions → Jira; AEMO/TNSP comment-response registers; status reporting; consistent customer correspondence; human approval steps | Process a fictional review round: classify 30 synthetic AEMO/TNSP comments, route them to owners, draft responses for review, and create Jira issues in a sandbox project through the Atlassian MCP tool. |
-| 6 | **Verification, risk and accountability** | Hallucination controls (always cite the source clause, cross-check); prompt injection hidden in external documents; confidential network models and data classification; engineering sign-off; evals for engineering outputs | Build a 15-case eval set that checks clause citations and numerical claims in AI-drafted report text, and measure how a custom instruction changes the results. |
-| 7 | **Governance and adoption** | A team AI usage standard; review gates aligned with submission hold points; skills and roles; change management with sceptical senior engineers; measuring impact (cycle time per stage, review rounds per submission, rework hours) | Draft a team AI usage standard, then turn it into Copilot custom instructions and a PR/report review checklist. |
-| 8 | **Capstone: the team efficiency strategy** | A holistic strategy covering process, tooling, people and skills, governance, a roadmap (90 days and 12 months), metrics and a business case | Fill in the strategy template with a **fully synthetic worked example**. You write your real version at work in Copilot, not in this app (see section 6). |
+| 1 | **AI foundations through a grid lens** | How LLMs work; why they confidently invent clause numbers and parameter values; context windows; workflows vs agents; what "agentic" really means | Ask Copilot to summarise S5.2.5.13 requirements from the public NER text, then from memory alone. Compare the two answers clause by clause. | ✅ Done |
+| 2 | **Mapping the team's work** | Value-stream mapping of the connection lifecycle; sizing the time spent per stage; scoring automation candidates by repeatability, risk, data access and value | Use Copilot to build a task inventory and scoring matrix from a synthetic timesheet and project list, then rank the top 10 opportunities. | ✅ Done |
+| 3 | **Copilot for study automation** (engineer focus) | Agent-assisted Python for batch studies and post-processing; encoding team conventions in custom instructions; automated GPS pass/fail checks such as rise and settling time, FRT and reactive power capability | From synthetic step-response and fault-ride-through CSVs, have Copilot agent mode build a checker against fictional GPS limits, with plots and a summary table. Review the code like a lead engineer would. | |
+| 4 | **Requirements, documents and knowledge** | Retrieval (RAG) explained simply; building traceability from NER clause to GPS to study to evidence; using SharePoint and Confluence through MCP; keeping knowledge between projects | Build a clause → requirement → evidence matrix for a fictional project, using prompt files plus M365/Confluence MCP against a sandbox space. | |
+| 5 | **Agentic workflows for grid leads** | Meeting notes → actions → Jira; AEMO/TNSP comment-response registers; status reporting; consistent customer correspondence; human approval steps | Process a fictional review round: classify 30 synthetic AEMO/TNSP comments, route them to owners, draft responses for review, and create Jira issues in a sandbox project through the Atlassian MCP tool. | |
+| 6 | **Verification, risk and accountability** | Hallucination controls (always cite the source clause, cross-check); prompt injection hidden in external documents; confidential network models and data classification; engineering sign-off; evals for engineering outputs | Build a 15-case eval set that checks clause citations and numerical claims in AI-drafted report text, and measure how a custom instruction changes the results. | |
+| 7 | **Governance and adoption** | A team AI usage standard; review gates aligned with submission hold points; skills and roles; change management with sceptical senior engineers; measuring impact (cycle time per stage, review rounds per submission, rework hours) | Draft a team AI usage standard, then turn it into Copilot custom instructions and a PR/report review checklist. | |
+| 8 | **Capstone: the team efficiency strategy** | A holistic strategy covering process, tooling, people and skills, governance, a roadmap (90 days and 12 months), metrics and a business case | Fill in the strategy template with a **fully synthetic worked example**. You write your real version at work in Copilot, not in this app (see section 6). | |
 
 ### Later: team tracks (after the leader track)
 - **Engineer track:** expanded modules 1, 3, 4 and 6, plus deeper study
@@ -144,15 +144,15 @@ applied-ai-course/
 
 ## 8. Build phases
 
-| Phase | Deliverable | Done when |
-|---|---|---|
-| 0 | Scaffold, content schema, CI content guard, GitHub Pages deploy | Empty app installs on iPhone and opens offline |
-| 1 | Today / Path / Lesson / Quiz; fictional project pack; **module 1 complete** | You can complete module 1 on the phone |
-| 2 | Spaced repetition, progress, export/import; **module 2** | Daily loop works end to end |
-| 3 | Labs view + `labs-sandbox` for modules 1–3 | Module 3 lab done on the work laptop |
-| 4 | AI tutor | Memo critique works |
-| 5 | Modules 4–8, each written one module ahead of your progress | Leader track complete |
-| 6 | Engineer and grid lead tracks | Ready to pilot with 2–3 team members |
+| Phase | Deliverable | Done when | Status |
+|---|---|---|---|
+| 0 | Scaffold, content schema, CI content guard, GitHub Pages deploy | Empty app installs on iPhone and opens offline | ✅ Done |
+| 1 | Today / Path / Lesson / Quiz; fictional project pack; **module 1 complete** | You can complete module 1 on the phone | ✅ Done |
+| 2 | Spaced repetition, progress, export/import; **module 2** | Daily loop works end to end | ✅ Done |
+| 3 | Labs view + `labs-sandbox` for modules 1–3 | Module 3 lab done on the work laptop | |
+| 4 | AI tutor | Memo critique works | |
+| 5 | Modules 4–8, each written one module ahead of your progress | Leader track complete | |
+| 6 | Engineer and grid lead tracks | Ready to pilot with 2–3 team members | |
 
 ## 9. Open items
 
