@@ -1,0 +1,71 @@
+questions:
+  - scenario: >-
+      Your team uses a Third Brain to answer questions across the Coral Ridge
+      project record. Answers are patchy, even though the model is the same one
+      everyone else uses.
+    question: What is the main limit on the Third Brain's quality?
+    options:
+      - The model version
+      - What the team records, where, and in what words
+      - The licence type
+      - The number of agents
+    answer: 1
+    explanation: >-
+      Copilot can only retrieve what the team recorded, where it recorded it, in
+      words it can find. The model version, licence type and agent count do not
+      limit retrieval in the way the record does.
+  - scenario: >-
+      A project lead wants a habit the team can adopt next week and check
+      without debate.
+    question: Which habit is most specific and checkable?
+    options:
+      - Document better
+      - External commitments logged within two working days
+      - Use Copilot more
+      - Keep files tidy
+    answer: 1
+    explanation: >-
+      A time-bound, observable action can be checked. "Document better", "use
+      Copilot more" and "keep files tidy" cannot be checked without debate.
+  - scenario: >-
+      A controlled document was superseded by a later meeting, but the file name
+      still says "Rev 1" with no other marking.
+    question: Why put status inside the document, not just in the file name?
+    options:
+      - It looks tidier
+      - Copilot reads the text and can see "superseded"
+      - File names are limited in length
+      - Policy requires it
+    answer: 1
+    explanation: >-
+      Copilot reads the text of a document, so a status line such as "Rev 1 –
+      SUPERSEDED by …" is visible to it. A file name alone is not read as the
+      document's status.
+  - scenario: >-
+      A vendor document contains text telling AI tools what conclusion to reach.
+    question: What is the best defence?
+    options:
+      - Delete Copilot
+      - Instructions that treat external documents as data, plus verifying the evidence
+      - Use Web mode
+      - Trust Microsoft's filters
+    answer: 1
+    explanation: >-
+      Treat external documents as data, not instructions, and check the evidence
+      yourself. Deleting Copilot, switching to Web mode or relying on vendor
+      filters does not address the risk; no defence is perfect, so verification
+      is the last line.
+  - scenario: >-
+      A colleague proposes the habit "Everyone documents everything better" for
+      the team charter.
+    question: What should you do before adopting it?
+    options:
+      - Adopt it as it is
+      - Ask the team to try harder
+      - Rewrite it as one specific, checkable action with an owner
+      - Add it to a policy and wait
+    answer: 2
+    explanation: >-
+      A habit needs a specific action, an owner and a way to check it. "Document
+      better" cannot be checked, asking people to try harder changes nothing, and
+      a policy alone does not make anyone act.

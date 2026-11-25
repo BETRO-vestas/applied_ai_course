@@ -1,0 +1,73 @@
+questions:
+- scenario: Copilot, searching SharePoint through an MCP tool, answers "droop is 5%" and cites a draft GPS from early negotiation. The executed GPS says 4%.
+  question: What is the root cause?
+  options:
+  - The model can't do arithmetic.
+  - Retrieval found a stale document, and nothing told the model to check revision and status.
+  - MCP tools are unreliable.
+  - The question was too short.
+  answer: 1
+  explanation: Retrieval quality depends on document quality. Revision and status must be visible in documents, and instructions must require the model to check them and cite the revision.
+- scenario: You're deciding when to build the R1 compliance matrix.
+  question: What's the main benefit of building it at the start of preparation?
+  options:
+  - It looks more professional.
+  - It takes less time overall.
+  - TNSPs require it at the start.
+  - Gaps are found and studied internally before submission, instead of by reviewers - removing review rounds.
+  answer: 3
+  explanation: Gap-finding moves earlier, which targets failure demand. A gap found internally costs a study; a gap found by AEMO costs a review round.
+- scenario: A keyword search for "voltage disturbance" finds section 10 of the study report, and Copilot marks GPS-9 as Evidenced. Section 10 covers overvoltage only.
+  question: What should the status be?
+  options:
+  - Evidenced - the section exists.
+  - Gap - nothing relevant was found.
+  - Partial - only part of the requirement is covered; the engineer must decide the action.
+  - Not applicable.
+  answer: 2
+  explanation: Partial coverage is a classic trap. Quote-backed evidence makes it visible, and the status decision stays with the engineer.
+- scenario: The only document showing control-mode switching studies is Rev B of the study report, marked SUPERSEDED because the plant model changed.
+  question: How should the matrix record GPS-5?
+  options:
+  - Gap, with a note that Rev B covered it with an old model and can't be used as evidence.
+  - Evidenced, citing Rev B.
+  - Partial.
+  - Leave it blank.
+  answer: 0
+  explanation: Superseded evidence produced with a different model isn't evidence for the current package. Recording why stops someone from "finding" it later.
+- scenario: A precedent in the comment library says the issue was resolved by "sharing Quokka Renewables' site test record, by agreement with Quokka Renewables". You're drafting a response for a different developer's project.
+  question: What do you take from the precedent?
+  options:
+  - The approach only - for example, add mode-transition study cases - with no reference to the other project, developer or data.
+  - The full resolution text, since it worked before.
+  - Nothing - precedents from other customers can never be used.
+  - Ask Quokka Renewables for permission to reuse their data.
+  answer: 0
+  explanation: Precedent is valuable for approach. Other customers' names, data and results stay confidential. Put this rule in your Copilot instructions and check it in review.
+- scenario: Copilot searches SharePoint through an MCP tool on your behalf.
+  question: What can it find?
+  options:
+  - Everything in the company's SharePoint.
+  - Only files you've opened before.
+  - Only what you have permission to open - so overly broad folder permissions become a real risk.
+  - Only public files.
+  answer: 2
+  explanation: Tools act with the user's permissions. Search makes accessible-but-obscure content easy to find and combine, so check permissions first.
+- scenario: Your comment library has 300 resolved comments, but the same comments keep coming back on new projects.
+  question: What's the most likely missing step?
+  options:
+  - A bigger AI model.
+  - More fields in the library.
+  - Searching the library more often.
+  - Turning reusable lessons into report template and checklist changes, so the comment is prevented rather than answered.
+  answer: 3
+  explanation: A library helps you answer comments. Building the lessons into templates and checklists stops the comments being raised at all.
+- scenario: You want to measure whether the knowledge workflow is working.
+  question: Which measure most directly shows failure demand falling?
+  options:
+  - Number of documents in SharePoint.
+  - Repeat comment rate and "missing or unclear" comments per round.
+  - Number of Copilot prompts used.
+  - Size of the comment library.
+  answer: 1
+  explanation: Activity measures (prompts, documents, library size) don't show outcomes. Repeat and preventable comments do.

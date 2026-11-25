@@ -1,72 +1,83 @@
 ---
-title: "Lab 1: Memory vs grounded - and the three modes"
-minutes: 45
+title: "Lab 1: Memory vs Web vs grounded"
+minutes: 35
 ---
 
-**Where:** your work laptop, VS Code + GitHub Copilot.
-**Data:** the public NER text only. No company or project files.
-**You'll need:** a folder with this repo's `labs-sandbox/m01` contents.
-Download the repo as a ZIP from GitHub, or copy the files across.
+- **Where:** your work laptop, Microsoft 365 Copilot app (copilot.cloud.microsoft or the Copilot app).
+- **Data:** the Coral Ridge training folder (link in your invitation) or the lab zip from this app.
+- **You'll need:** `CR-00 Project overview` and `CR-02 Decision log`.
 
-## Setup (5 min)
+### Setup (5 min)
 
-1. Open `labs-sandbox/m01` as a folder in VS Code.
-2. From the AEMC website, open the **current version of the NER** (public).
-   Find clause **S5.2.5.13** (voltage and reactive power control).
-3. Paste the clause text into `sources/ner-s5.2.5.13.md`, under the heading
-   that records the **NER version number and date**.
+- Open the Copilot app. Note which licence label shows under your name.
+- Open the training folder and check that you can open CR-00 and CR-02.
+- Open `results-lab1` (a Word template in the zip) to record your answers.
 
-## Part A: from memory (5 min)
+### Part A: from memory (5 min)
 
-1. Open Copilot Chat in **Ask** mode. Start a new chat with **no files
-   attached**.
-2. Ask: *"What does NER clause S5.2.5.13 require for voltage control rise time
-   and settling time under the automatic access standard? Be specific."*
-3. Paste the answer into `results.md` under **Part A**.
+- Start a **new chat**. If you have the Work/Web toggle, choose **Web**. Don't
+  attach anything.
+- Ask: *"Give me a summary of the Coral Ridge Wind Farm project: capacity,
+  number of turbines, the customer, the network operator and the current
+  project stage."*
+- Paste the answer under **Part A**.
 
-## Part B: grounded (10 min)
+### Part B: grounded on a file (10 min)
 
-1. Start a **new** chat. Attach `sources/ner-s5.2.5.13.md` (use `#file` or
-   drag it in).
-2. Run the prompt in `.github/prompts/grounded-clause-summary.prompt.md`.
-   If your VS Code supports prompt files, type `/grounded-clause-summary`.
-   Otherwise copy the prompt text in.
-3. Paste the answer under **Part B**.
+- Start a new chat. Attach **CR-00 Project overview**. Premium users can type
+  `/` and pick the file. Chat users can upload it, or open the file and use
+  Copilot alongside it.
+- Ask:
+  *"Using only the attached file, give me: capacity, number of turbines,
+  customer, network operator, current project stage and the current Grid Lead.
+  Cite the line for each item. Write 'not stated' if the file doesn't say."*
+- Paste the answer under **Part B**.
 
-## Part C: score both (10 min)
+### Part C: score both (10 min)
 
-In `results.md`, fill in the scoring table. For each specific claim (a number,
-a clause reference, a condition), mark it as:
+For each item in Parts A and B, mark:
 
-- ✅ **Correct**: matches the source text
-- ❌ **Wrong**: contradicts the source text
-- ❓ **Unverifiable**: the source doesn't say
+- ✅ **Correct:** matches CR-00
+- ❌ **Wrong or invented:** contradicts CR-00, or invents something
+- ❓ **Not stated:** CR-00 doesn't say, and Copilot correctly said so
 
-## Part D: watch the three modes (10 min)
+### Part D: a taste of Module 3 (5 min)
 
-Give the same task to each mode, in a new chat each time:
+Start a new chat. Attach **CR-02 Decision log** only. Ask:
+*"Who is responsible for the harmonic study on Coral Ridge?"*
 
-> *"Create `checklist.md`: a review checklist for an engineer checking a
-> voltage control step-response study against S5.2.5.13, based only on
-> `sources/ner-s5.2.5.13.md`. One line per check, each with the sentence it
-> comes from."*
+Write down the answer. **Keep it.** You'll find out in Module 3 whether it's
+still true.
 
-1. **Ask** mode: note that it answers in chat and changes no files.
-2. **Edit** mode (if available in your version): note that it proposes a file
-   change for you to accept.
-3. **Agent** mode: note the **steps it takes**, which files it reads, what it
-   creates, and **when it asks permission**.
+### Reflect
 
-Record what you saw under **Part D**.
+1. What did Part A invent, and how confident did it sound?
+2. What did "not stated" do to your trust in Part B?
+3. Where in your own week would a Part A–style answer cause real damage?
 
-## Part E: reflect (5 min)
+### If something isn't available
 
-Answer the three questions at the bottom of `results.md`. Then mark the lab
-done in the app and paste your one-line takeaway into the notes.
+- **No Work/Web toggle:** you're probably on Copilot Chat. Part A works as is.
+- **Can't reach the training folder:** download the zip from this app,
+  unzip it, and upload the files to your OneDrive.
+- **Upload blocked by policy:** open the file in Word and use Copilot in Word,
+  or paste the text of CR-00 into the chat. It's fictional and safe to paste.
 
-## If something isn't available
+### Answer key
 
-- **No Edit mode:** skip it, because the important comparison is Ask vs Agent.
-- **Prompt files not supported:** copy the prompt text in by hand.
-- **Can't download the NER at work:** do Parts A–C on any public clause text
-  you can reach. The method matters more than the clause.
+Try the lab first.
+
+| Item | Correct (CR-00) |
+|---|---|
+| Capacity | 250 MW |
+| Turbines | 50 × 5.0 MW |
+| Customer | Brolga Energy |
+| Network operator | SouthGrid Networks |
+| Stage | Commissioning and hold point testing (Compliance stream) |
+| Current Grid Lead | Tom Hale (since March 2026) |
+
+**Part A** should know nothing about this fictional project. A good answer says
+so. A typical answer either refuses or invents plausible details. Any invented
+detail is the lesson.
+
+**Part D:** CR-02 says *Brolga's consultant*. Hold on to that answer.

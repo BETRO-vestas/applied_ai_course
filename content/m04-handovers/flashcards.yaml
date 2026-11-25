@@ -1,0 +1,25 @@
+cards:
+  - after: 1
+    front: "What question does a handover answer?"
+    back: "What do I need to know so nothing promised is dropped and nothing decided is re-argued?"
+  - after: 1
+    front: "Retrieve, verify, judge, hand over"
+    back: "Copilot remembers and lists; people check, correct, add meaning and hold the conversation"
+  - after: 2
+    front: "The seven handover pack sections"
+    back: "Snapshot, decisions in force, commitments, open items and risks, people, where things are, watch-outs"
+  - after: 2
+    front: "Which handover section must a person write?"
+    back: "Watch-outs: sensitivities, history and what the customer cares about"
+  - after: 2
+    front: "Status words in a handover pack"
+    back: "Open, Done, Superseded, At risk, Not stated"
+  - after: 3
+    front: "Why use a sequence of prompts for a handover?"
+    back: "One large prompt gives a long, shallow answer; follow-ups go back to sources and deepen each section"
+  - after: 3
+    front: "Step 2 of the handover prompt sequence"
+    back: "Search again for informal commitments such as 'I'll', 'we will', 'by Friday' and 'every week'"
+  - after: 4
+    front: "What should the manager check in a handover?"
+    back: "The commitments section, the template and the time allowed; then ask 'what did the pack miss?' a month later"

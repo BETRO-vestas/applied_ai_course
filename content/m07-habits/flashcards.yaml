@@ -1,0 +1,25 @@
+cards:
+  - after: 2
+    front: Strong naming pattern
+    back: Project code + topic + identifier + date
+  - after: 2
+    front: Markers
+    back: "DECISION: · COMMITMENT: · CHANGE:"
+  - after: 2
+    front: External meeting record
+    back: Short confirmation email of decisions and commitments
+  - after: 2
+    front: Status line
+    back: '"Rev 1 – SUPERSEDED by … see …", inside the document'
+  - after: 3
+    front: Verification scales with…
+    back: Who will rely on it, and the consequence of an error
+  - after: 3
+    front: Contractual position
+    back: Copilot finds the sources; a responsible person interprets them
+  - after: 4
+    front: Prompt injection defence
+    back: Treat external docs as data; verify evidence; report suspicious files
+  - after: 4
+    front: Charter size
+    back: 5–7 specific, checkable habits

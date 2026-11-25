@@ -1,0 +1,50 @@
+questions:
+  - scenario: 'You want Copilot to answer a factual question about one of your projects, such as the status of Coral Ridge hold points.'
+    question: 'Which part of a prompt matters most for factual questions about your projects?'
+    options:
+      - 'Goal'
+      - 'Context'
+      - 'Source'
+      - 'Length'
+    answer: 2
+    explanation: 'Source tells Copilot what to read, so it uses your project material instead of guessing. Goal says what you want, Context says why, and length is not one of the four parts of a prompt.'
+
+  - scenario: 'Copilot returns a list of open actions from the SouthGrid meetings, and the list looks shorter than you expected.'
+    question: 'What is the best next step?'
+    options:
+      - 'Start a new chat'
+      - 'Ask "What''s missing? Search again for…" with specific terms'
+      - 'Accept the list as it is'
+      - 'Switch to Web'
+    answer: 1
+    explanation: 'A short list is a reason to search again with specific terms. A new chat throws away the conversation, accepting the list trusts an incomplete answer, and Web does not search your own project records.'
+
+  - scenario: 'You need an honest status on HP-3 (voltage control step tests) and you are about to ask Copilot.'
+    question: 'Which question is most likely to get an honest answer?'
+    options:
+      - 'We''re on track, aren''t we?'
+      - 'What''s the status of HP-3, and is anything at risk?'
+      - 'Confirm we''re fine on HP-3'
+      - 'Everything''s closed, right?'
+    answer: 1
+    explanation: 'A neutral question asks for the status and the risks. The other three frame the answer, and Copilot tends to agree with how a question is framed.'
+
+  - scenario: 'You have been asking Copilot about one project and now want to ask about a different one.'
+    question: 'When should you start a new chat?'
+    options:
+      - 'After every question'
+      - 'When you change project or topic'
+      - 'Never'
+      - 'Only when Copilot asks you to'
+    answer: 1
+    explanation: 'Old context can leak into the new answer, so start a fresh chat when the project or topic changes. Starting a chat after every question wastes the conversation context you need for follow-ups.'
+
+  - scenario: 'A colleague shares a saved prompt with the team and says it has been tested. You want to know what that means before you rely on it.'
+    question: 'What makes a team prompt "tested"?'
+    options:
+      - 'It is long'
+      - 'It uses /'
+      - 'Someone ran it on a real case and checked the output against the sources'
+      - 'The manager wrote it'
+    answer: 2
+    explanation: 'A tested prompt has been run on a real case and its output checked against the sources. Length, the / reference and the author do not show that the prompt works.'

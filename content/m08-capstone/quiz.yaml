@@ -1,0 +1,46 @@
+questions:
+  - scenario: Your team wants to start a Third Brain. Several candidate questions have been suggested, and you need to choose one for the first attempt.
+    question: Which is the best first Third Brain use case?
+    options:
+      - Interpreting contract clauses
+      - A recurring, sourced, checkable question with an owner
+      - Everything at once
+      - A question about data outside M365
+    answer: 1
+    explanation: A recurring, sourced, checkable question with an owner meets the selection criteria in lesson 1. Contract interpretation needs judgement, trying everything at once spreads effort too thin, and data outside M365 is hard for Copilot to reach.
+  - scenario: Your manager asks you to start a Third Brain this month. The team has no figures on how long searches and handovers take today.
+    question: Why should you capture a baseline before you build?
+    options:
+      - Policy
+      - To slow things down
+      - Copilot needs it
+      - Without a 'before', you can't show improvement
+    answer: 3
+    explanation: Without a baseline you cannot show improvement in three months. Baselines are light and estimates are labelled as estimates. Copilot does not need a baseline, and it is not a policy requirement or a way to slow the work down.
+  - scenario: Your team has a small budget and wants a Third Brain that works for the whole mixed team within a month.
+    question: What does the minimum viable Third Brain include?
+    options:
+      - Prompt pack, notebook, agent (if Premium), charter, one measure
+      - Copilot Studio
+      - A new SharePoint site
+      - Training for the whole company
+    answer: 0
+    explanation: The minimum viable Third Brain is a prompt pack, a project notebook, an agent if the user has Premium, a charter of habits and one measure. Copilot Studio, a new SharePoint site and company-wide training are not part of the minimum.
+  - scenario: You have built a working Third Brain on a test project and now need to decide where the real capstone content goes.
+    question: Where does your real capstone content go?
+    options:
+      - This app
+      - A public repo
+      - Your work environment, following your organisation's policy
+      - Personal email
+    answer: 2
+    explanation: Real capstone content stays in your work environment and follows your organisation's policy. This app holds only generic or fictional material, and a public repo or personal email is never the right place for real team data.
+  - scenario: The Third Brain missed a commitment in month one. The commitment was in an email, but not in the project notebook.
+    question: What should you do at the monthly "what did it miss?" review?
+    options:
+      - Remove the agent
+      - Stop checking sources to save time
+      - Wait for the next audit
+      - Ask what it missed, fix the source or instruction, then retest
+    answer: 3
+    explanation: The monthly review turns each miss into a fix to the sources, the habits or the instructions, and a retest shows whether the fix worked. Removing the agent throws away the gain, stopping checks removes the safety net, and waiting for an audit is too slow.

@@ -1,0 +1,25 @@
+cards:
+  - after: 1
+    front: Third Brain
+    back: The team's shared, searchable project memory, accessed through Copilot
+  - after: 1
+    front: Good use case
+    back: Recurring, costly, sourced, checkable, low harm if partial, owned
+  - after: 2
+    front: Baseline measures
+    back: Search hours, handover hours, misses, time to answer
+  - after: 2
+    front: Estimate or count
+    back: Label estimates as estimates, counts as counts, and show your assumptions
+  - after: 3
+    front: Minimum viable Third Brain
+    back: Prompts + notebook + agent + charter + measure
+  - after: 3
+    front: Mixed licences
+    back: Notebook and shared files for Chat users; agent for Premium
+  - after: 4
+    front: Roll-out
+    back: Show, start with willing users, model habits, ask "what did it miss?"
+  - after: 4
+    front: Two-sentence message
+    back: "Purpose first, then the rule: Copilot finds and drafts; we check the source before anything goes out"

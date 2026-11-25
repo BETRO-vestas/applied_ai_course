@@ -1,36 +1,42 @@
-title: Applied AI for Grid Connection Teams
+title: "Applied AI for Grid Connection Teams"
 modules:
   - id: m01
     dir: m01-foundations
-    title: AI foundations through a grid lens
-    summary: How LLMs work, why they confidently invent clause numbers, and what "agentic" really means.
+    title: "Foundations: how M365 Copilot works"
+    summary: "Grounding, Work vs Web, and why Copilot sounds confident when it is wrong."
     status: available
   - id: m02
-    dir: m02-mapping
-    title: Mapping the team's work
-    summary: Value-stream map the connection lifecycle and score where AI can help.
+    dir: m02-prompting
+    title: "Prompting chat well"
+    summary: "Goal, context, source and expectations; referencing files and meetings; refining and saving prompts."
     status: available
   - id: m03
-    title: Copilot for study automation
-    summary: Agent-assisted Python for batch studies, post-processing and GPS checks.
+    dir: m03-retrieval
+    title: "Retrieval: finding decisions and commitments"
+    summary: "Finding decisions and commitments across mail, Teams, files and meetings, and avoiding the traps."
     status: coming
   - id: m04
-    title: Requirements, documents and knowledge
-    summary: Retrieval, clause-to-evidence traceability and keeping knowledge between projects.
+    dir: m04-handovers
+    title: "Handovers with Copilot"
+    summary: "Writing a handover pack that catches what the last handover missed."
     status: coming
   - id: m05
-    title: Agentic workflows for grid leads
-    summary: Comment registers, meeting actions, Jira and consistent correspondence.
+    dir: m05-notebooks
+    title: "Notebooks: curated project memory"
+    summary: "Curating a project notebook, and deciding when it beats searching everything or an agent."
     status: coming
   - id: m06
-    title: Verification, risk and accountability
-    summary: Hallucination controls, prompt injection, confidential data and engineering sign-off.
+    dir: m06-agents
+    title: "Building agents with Agent Builder"
+    summary: "Building and testing an agent from instructions, knowledge and an answer key."
     status: coming
   - id: m07
-    title: Governance and adoption
-    summary: A team AI standard, review gates, skills and measuring impact.
+    dir: m07-habits
+    title: "Information habits and verification as leadership"
+    summary: "Team information habits, verification and sign-off, and prompt injection in external documents."
     status: coming
   - id: m08
-    title: "Capstone: the team efficiency strategy"
-    summary: A holistic strategy covering process, tools, people, governance, roadmap and metrics.
+    dir: m08-capstone
+    title: "Capstone: your team's Third Brain"
+    summary: "Designing and rolling out your team's Third Brain, using a worked example."
     status: coming

@@ -1,0 +1,46 @@
+questions:
+  - scenario: "You are setting up a Project Memory agent for your Grid Delivery team."
+    question: "What most determines an agent's behaviour?"
+    options:
+      - "Its name"
+      - "Its instructions"
+      - "Its icon"
+      - "The number of files"
+    answer: 1
+    explanation: "Instructions decide how the agent behaves, so they matter most. The name, icon and file count do not change how it answers."
+  - scenario: "Your agent's settings include a 'prioritise specified sources' option."
+    question: "What does 'prioritise specified sources' mean?"
+    options:
+      - "General knowledge is fully blocked"
+      - "Sources are preferred, but your instructions still need a 'never invent' rule"
+      - "The web is used first"
+      - "Only one file is read"
+    answer: 1
+    explanation: "The setting prioritises your sources but does not fully block general knowledge, so the instructions must still say never to invent. Blocking is not guaranteed, and the web is not used first."
+  - scenario: "Your agent fails one of the 10 known-answer tests."
+    question: "What is the best approach?"
+    options:
+      - "Rewrite all the instructions"
+      - "Change one instruction, rerun all 10, compare"
+      - "Add more files"
+      - "Share it anyway"
+    answer: 1
+    explanation: "Changing one thing and rerunning all 10 shows what helped. Rewriting everything, adding files or sharing it without a fix does not."
+  - scenario: "You have shared a SharePoint-grounded agent with a colleague who has only Copilot Chat."
+    question: "What could happen?"
+    options:
+      - "Nothing"
+      - "Usage may be billed pay-as-you-go to your organisation, if enabled"
+      - "It switches to Web"
+      - "They get full Premium"
+    answer: 1
+    explanation: "Chat-only use of work-data agents can be billed pay-as-you-go to the organisation, if enabled. Sharing does not change the colleague's licence, and it does not switch the agent to web content."
+  - scenario: "A team wants an agent that creates tickets and runs multi-step workflows."
+    question: "When should you consider Copilot Studio?"
+    options:
+      - "For your first agent"
+      - "When you need actions in other systems, workflows or formal publishing"
+      - "When you have more than 3 starter prompts"
+      - "Never"
+    answer: 1
+    explanation: "Copilot Studio is for actions in other systems, workflows and formal publishing, and is a separate business case. It is not for a first agent, and the number of starter prompts is not a reason to move."

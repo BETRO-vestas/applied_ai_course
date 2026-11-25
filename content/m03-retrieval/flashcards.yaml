@@ -1,0 +1,25 @@
+cards:
+  - after: 1
+    front: Retrieval's blind spot
+    back: If it isn't in the top results, it doesn't exist for that answer
+  - after: 2
+    front: Decision vs commitment
+    back: A choice of direction vs a promise with a date
+  - after: 2
+    front: The "after" question
+    back: "Is there anything after this that changes it?"
+  - after: 3
+    front: Recap vs transcript
+    back: A summary (interpretation) vs the record (evidence)
+  - after: 4
+    front: Three answer types
+    back: Complete, partial, wrong
+  - after: 4
+    front: "\"Open the source\" rule"
+    back: Open cited sources before relying on a fact externally
+  - after: 4
+    front: Documents that pretend to be current
+    back: Unmaintained logs, old contact lists, unrevised plans
+  - after: 2
+    front: Derived dates
+    back: Some answers must be calculated; ask Copilot to show its working

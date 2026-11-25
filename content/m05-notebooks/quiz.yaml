@@ -1,0 +1,46 @@
+questions:
+  - scenario: Your team has 11 curated Coral Ridge documents in a notebook. A colleague asks Copilot to search the whole mailbox for the same question.
+    question: What is the main advantage of the curated notebook?
+    options:
+      - It is faster to set up
+      - It finds more documents you did not know existed
+      - Answers are grounded on a known, chosen set of sources
+      - It works offline
+    answer: 2
+    explanation: A curated notebook grounds answers only on the sources you chose, so the answer is consistent and traceable. Searching everything finds more, but it also brings in ranking noise and other projects. Setup speed and offline use are not the point.
+  - scenario: Your Coral Ridge notebook is shared with a colleague who has Copilot Chat but not Premium.
+    question: Which source type will that colleague be unable to use?
+    options:
+      - Word files
+      - Teams chats and meeting transcripts
+      - PDF files
+      - Email threads
+    answer: 1
+    explanation: Chat-only users can use Word, Excel, PowerPoint, PDF, OneNote, Loop and email threads. Teams chats, meeting transcripts and recaps, and URLs need Premium. Check current Microsoft documentation, because the limits change.
+  - scenario: You ask your notebook about the HP-2 witnessing position. It replies "not found in this notebook".
+    question: What does that answer most likely tell you?
+    options:
+      - Copilot has failed and you should try again later
+      - You should switch to Web mode
+      - The project memory has a gap: the document is missing or the point was never written down
+      - The notebook is corrupt
+    answer: 2
+    explanation: A "not found" answer is a signal about the notebook's contents. Either the relevant document was not added, or the decision was never written down. Asking again or switching to Web mode will not fix a gap in your project memory.
+  - scenario: Priya wants the same handover-pack instructions used by all six Grid Leads, every month, without anyone pasting them in again.
+    question: Which tool fits best?
+    options:
+      - A separate notebook for each Grid Lead
+      - An agent, because several people need the same instructions repeatedly
+      - An email with the instructions attached to each handover
+      - Neither; a single Chat prompt is enough
+    answer: 1
+    explanation: A notebook depends on each person pasting the standing brief, so instructions drift. When several people need the same instructions repeatedly, an agent holds them in one place. Individual notebooks and emailed instructions multiply the drift.
+  - scenario: Tom's Coral Ridge notebook refers to three emails stored in his personal mailbox. Mei is taking over the project in December.
+    question: What should Tom do before the handover?
+    options:
+      - Nothing; Mei will have access through the notebook
+      - Give Mei his mailbox password
+      - Move the key evidence to the shared project folder and re-add it to the notebook
+      - Delete the emails so that nothing is out of date
+    answer: 2
+    explanation: Permissions apply to each reference, so Mei may not be able to open emails in Tom's mailbox. Sharing the password is not acceptable, and deleting evidence destroys the record. Moving the evidence to a shared location and re-adding it keeps the memory usable by the whole team.

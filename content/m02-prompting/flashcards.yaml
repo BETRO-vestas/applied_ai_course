@@ -1,0 +1,32 @@
+cards:
+  - after: 1
+    front: 'GCSE'
+    back: 'Goal, Context, Source, Expectations'
+
+  - after: 2
+    front: '`/` reference'
+    back: 'Points Copilot at a specific file, person, meeting or email'
+
+  - after: 2
+    front: 'Scope words'
+    back: 'Time, people, type, project-specific terms (VO-03, HP-2)'
+
+  - after: 2
+    front: 'Best retrieval term'
+    back: 'A specific identifier, not a description'
+
+  - after: 3
+    front: 'Iterate'
+    back: 'Respond to the first answer instead of restarting'
+
+  - after: 3
+    front: 'Neutral question'
+    back: 'Avoids Copilot simply agreeing with your framing'
+
+  - after: 4
+    front: 'Template prompt'
+    back: 'A tested prompt with [PLACEHOLDERS] that anyone can reuse'
+
+  - after: 4
+    front: 'Team prompt quality bar'
+    back: 'Purpose, grounding, citations, allows gaps, tested'

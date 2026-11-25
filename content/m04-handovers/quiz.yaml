@@ -1,0 +1,46 @@
+questions:
+  - scenario: "A customer's connection manager is replaced. The handover pack lists the old manager in the People section, and the new manager's first email asks for a date that was agreed in a Teams chat three months ago."
+    question: "Which section of the pack most likely failed, and what should have caught it?"
+    options:
+      - "Decisions in force; the decision log should have been checked against the chat"
+      - "Commitments and People; informal chat promises were not retrieved and the contacts list was not updated"
+      - "Where things are; the file links were out of date"
+      - "Snapshot; the project stage was wrong"
+    answer: 1
+    explanation: "The chat promise belongs in Commitments, and the contact change belongs in People. Both were missed because the search did not reach chats and the contacts list was not refreshed. Decisions and file locations are not the point of failure here."
+  - scenario: "Your team's handover pack has a line saying a supplier's harmonic study is 'Done', citing a decision from February. A later email from April reverses that decision."
+    question: "What is the correct status treatment?"
+    options:
+      - "Leave the February line as Done, because the decision was made"
+      - "Delete the February line so the reader only sees the current position"
+      - "Mark the February line Superseded, show it alongside the April change, and cite both"
+      - "Mark it At risk and leave it for the incoming lead to resolve"
+    answer: 2
+    explanation: "Superseded stops the incoming lead acting on the old decision. Showing both entries with their sources keeps the history visible. Deleting the line loses the context, and At risk misstates a decision that has already changed."
+  - scenario: "You ask Copilot for a handover pack in one large prompt. The answer has all six sections, but the commitments section has only two items and both are from meeting actions."
+    question: "What is the best next step?"
+    options:
+      - "Accept the pack, because all six sections are present"
+      - "Run a follow-up prompt that searches again for informal commitments such as 'I'll' and 'by Friday'"
+      - "Ask Copilot to make the commitments section longer without changing the sources"
+      - "Start again with a shorter prompt"
+    answer: 1
+    explanation: "A single large prompt gives a long answer that can be shallow. A targeted follow-up that goes back to the sources for informal commitments is the step that finds what was missed. Asking for more length without new sources only adds guesses."
+  - scenario: "Your team is about to move a project from its connections work to its compliance work. The outgoing lead has written a Copilot-assisted pack and wants to skip the handover meeting because the pack is complete."
+    question: "What should the manager do?"
+    options:
+      - "Accept the pack and skip the meeting, because Copilot covers the sources"
+      - "Keep the meeting, with the pack as the agenda, so the watch-outs and open questions are discussed"
+      - "Ask Copilot to write the meeting notes instead"
+      - "Ask the incoming lead to write the watch-outs section"
+    answer: 1
+    explanation: "A pack is not a handover. The conversation adds the watch-outs, which only a person can write, and answers the open questions. The watch-outs should come from the outgoing lead, not the incoming lead or Copilot."
+  - scenario: "A month after a handover, the incoming lead says the pack was good but missed a sensitivity about the customer's lenders and a delay that was agreed verbally."
+    question: "Which action most improves the next handover?"
+    options:
+      - "Remove the watch-outs section, because it is subjective"
+      - "Ask the incoming lead 'what did the pack miss?' and update the prompt and the watch-outs process"
+      - "Ask Copilot to rewrite the pack without the sensitivity"
+      - "Make the pack longer by adding every email"
+    answer: 1
+    explanation: "The one-month follow-up closes the loop. The verbal delay and the sensitivity are the kind of item a prompt cannot reach, so the watch-outs process and the prompt both need updating. Removing the section or adding more emails does not address the gap."

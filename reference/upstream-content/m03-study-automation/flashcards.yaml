@@ -1,0 +1,43 @@
+cards:
+  - after: 1
+    front: The seven stages of a study run?
+    back: Define cases, set up, run, extract, post-process, assess, report.
+  - after: 1
+    front: Which study stages usually cost the most engineer time?
+    back: Set-up, post-processing and report preparation - not the simulation run itself.
+  - after: 1
+    front: The safe pattern for Copilot with confidential models?
+    back: Copilot helps write the script; the script runs locally; model files and TNSP data stay out of the prompt.
+  - after: 2
+    front: What do custom instructions do for a team?
+    back: Add team conventions (units, naming, plotting, definitions) to every Copilot request in the repo, so code comes out consistent.
+  - after: 2
+    front: Six things to check when reviewing AI-written engineering code?
+    back: Units and bases, sign conventions, time windows, sampling, edge cases, silent assumptions.
+  - after: 2
+    front: Why is "it runs" not enough for agent-written code?
+    back: The agent loop fixes crashes, not engineering logic. Known-answer tests check the logic.
+  - after: 3
+    front: Why keep GPS definitions and limits in a data file?
+    back: Reviewable without reading code, reusable across projects, and auditable in reports.
+  - after: 3
+    front: The four results a GPS checker should give?
+    back: Pass, marginal, fail, and can't assess.
+  - after: 3
+    front: Who chooses metric definitions when the GPS is silent?
+    back: The engineering team - written down and applied consistently. AI can list the options but doesn't decide.
+  - after: 4
+    front: When does a first-order step response reach 90%?
+    back: t = τ·ln(10) ≈ 2.303τ.
+  - after: 4
+    front: What is a known-answer test?
+    back: Running the checker on a signal whose correct result is already known, to test the tool before trusting it.
+  - after: 4
+    front: Why does filtering measured data need care?
+    back: Every filter changes the answer (a centred average shifts timing earlier). Choose it deliberately, document it, apply it consistently.
+  - after: 5
+    front: Minimum elements of a team study toolkit?
+    back: One repo, custom instructions, criteria files, known-answer tests, review, a named owner, version numbers.
+  - after: 5
+    front: Best first stage to automate as a team?
+    back: Post-processing - high toil, low risk, easy to check against existing reports.

@@ -1,0 +1,25 @@
+cards:
+  - after: 1
+    front: Copilot Notebook
+    back: A curated workspace of references and notes, with grounded chat
+  - after: 1
+    front: Source limit by licence
+    back: Chat allows up to 50 sources per notebook; Premium allows up to 300 (check current docs)
+  - after: 1
+    front: Premium-only references
+    back: Teams chats, meeting transcripts and recaps, and URLs
+  - after: 2
+    front: Standing brief
+    back: Instructions pasted at the start of a chat, or kept on a page, to steer every answer
+  - after: 2
+    front: "\"Not found in this notebook\""
+    back: A sign of a gap in the project memory, not a tool failure
+  - after: 3
+    front: Shared evidence rule
+    back: Key evidence goes in shared locations, not personal mail, so the whole team can reach it
+  - after: 3
+    front: Verified page
+    back: A saved, sourced answer you have checked, so you can reuse it instead of re-asking
+  - after: 4
+    front: Notebook or agent?
+    back: Start with a notebook; build an agent when several people repeatedly need the same instructions

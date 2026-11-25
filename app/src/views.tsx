@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'preact/hooks';
-import { modules, getModule, projectPack, courseTitle, type Module, type Doc, type Card } from './content';
+import { modules, getModule, projectPack, prompts, aiTutor, courseTitle, type Module, type Doc, type Card } from './content';
 import { useProgress, update, exportJson, importJson, resetAll, logActivity, streak, type Progress } from './store';
 import { schedule, preview, today, NEW_PER_DAY, type Grade } from './srs';
 import { href } from './router';
@@ -95,7 +95,7 @@ export function Today() {
         </a>
       )}
       <a class="card row" href={href('pack')}>
-        <span>🌬️ Larkspur Downs project pack</span><span class="muted">›</span>
+        <span>🌬️ Coral Ridge project pack</span><span class="muted">›</span>
       </a>
     </div>
   );
@@ -161,7 +161,21 @@ export function ModuleView({ id }: { id: string }) {
         ))}
       </ul>
       {m.cards.length > 0 && <a class="card row" href={href('cards', m.id)}><span>🗂️ Flashcards</span><span class="muted">{deckStatus(p, m.id).open.length}/{m.cards.length} unlocked ›</span></a>}
+      {m.worked && <a class="card row" href={href('m', m.id, 'worked')}><span>🔍 Worked example</span><span class="muted">›</span></a>}
+      {m.sidebar && <details class="card"><summary><strong>In your department</strong></summary><Prose html={m.sidebar.html} /></details>}
     </div>
+  );
+}
+
+export function WorkedView({ id }: { id: string }) {
+  const m = getModule(id);
+  if (!m?.worked) return <NotFound />;
+  return (
+    <article>
+      <Back to={href('m', m.id)} label={m.title} />
+      <h1>{m.worked.title}</h1>
+      <Prose html={m.worked.html} />
+    </article>
   );
 }
 
@@ -434,13 +448,47 @@ export function PackView({ slug }: { slug?: string }) {
   );
 }
 
+/* ---------- Prompt library ---------- */
+
+function CopyButton({ text }: { text: string }) {
+  const [done, setDone] = useState(false);
+  return (
+    <button class="copy" onClick={async () => {
+      try {
+        await navigator.clipboard.writeText(text);
+        setDone(true);
+        setTimeout(() => setDone(false), 1500);
+      } catch {
+        setDone(false);
+      }
+    }}>{done ? 'Copied' : 'Copy prompt'}</button>
+  );
+}
+
+export function PromptsView() {
+  return (
+    <div>
+      <h1>Prompt library</h1>
+      <p class="muted">Copy a prompt into M365 Copilot, then adapt the square brackets to your team.</p>
+      {prompts.map((p) => (
+        <details key={p.id} class="card">
+          <summary><strong>{p.id} · {p.title}</strong> <span class="muted small">{p.use}</span></summary>
+          <pre class="prompt">{p.prompt}</pre>
+          <CopyButton text={p.prompt} />
+        </details>
+      ))}
+      {aiTutor && <details class="card"><summary><strong>{aiTutor.title}</strong></summary><Prose html={aiTutor.html} /></details>}
+    </div>
+  );
+}
+
 /* ---------- Settings ---------- */
 
 export function SettingsView() {
   const [p] = useProgress();
   const [msg, setMsg] = useState('');
   const doExport = async () => {
-    const name = `grid-ai-progress-${new Date().toISOString().slice(0, 10)}.json`;
+    const name = `copilot-leaders-progress-${new Date().toISOString().slice(0, 10)}.json`;
     const file = new File([exportJson()], name, { type: 'application/json' });
     try {
       if (navigator.canShare?.({ files: [file] })) { await navigator.share({ files: [file], title: name }); setMsg('Shared.'); return; }

@@ -11,14 +11,16 @@ export interface Card { key: string; moduleId: string; after: number; front: str
 export interface Module {
   id: string; dir?: string; title: string; summary: string; status: 'available' | 'coming';
   lessons: Doc[]; quiz: QuizQuestion[]; cards: Card[]; lab?: Doc; memo?: Doc;
+  sidebar?: Doc; worked?: Doc;
 }
+export interface Prompt { id: string; title: string; use: string; prompt: string }
 
 function rel(path: string) { return path.replace(/^.*\/content\//, ''); }
 
 function parseDoc(path: string, raw: string): Doc {
   let meta: Record<string, unknown> = {};
   let body = raw;
-  const m = raw.match(/^---\n([\s\S]*?)\n---\n?/);
+  const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
   if (m) { meta = parseYaml(m[1]) ?? {}; body = raw.slice(m[0].length); }
   const slug = rel(path).split('/').pop()!.replace(/\.md$/, '');
   const html = marked.parse(body, { async: false }) as string;
@@ -67,9 +69,14 @@ export const modules: Module[] = syllabus.modules.map((m) => {
     })),
     lab: docAt(`${m.dir}/lab.md`),
     memo: docAt(`${m.dir}/memo.md`),
+    sidebar: docAt(`${m.dir}/sidebar.md`),
+    worked: docAt(`${m.dir}/worked-example.md`),
   };
 });
 
 export const projectPack: Doc[] = docsIn('project-pack/');
+
+export const prompts: Prompt[] = file<{ prompts: Prompt[] }>('prompts/library.yaml')?.prompts ?? [];
+export const aiTutor: Doc | undefined = docAt('prompts/ai-tutor.md');
 
 export function getModule(id: string) { return modules.find((m) => m.id === id); }

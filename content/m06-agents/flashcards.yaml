@@ -1,0 +1,25 @@
+cards:
+  - after: 1
+    front: Declarative agent
+    back: Defined by name, instructions, knowledge, starters (and optional capabilities)
+  - after: 1
+    front: SharePoint knowledge limit
+    back: 100 files per agent (checked Nov 2026)
+  - after: 2
+    front: Instruction template
+    back: Role, purpose, how to answer, rules, output, boundaries
+  - after: 3
+    front: Known-answer set
+    back: 10 questions with verified answers, including traps and a "not found" case
+  - after: 3
+    front: Sharing bar
+    back: ≥8/10, no confident wrong answers on traps, correct "not found"
+  - after: 3
+    front: One change at a time
+    back: Change one instruction; rerun all tests
+  - after: 4
+    front: Agent ownership
+    back: Owner, review rhythm, feedback route, version log
+  - after: 4
+    front: Copilot Studio
+    back: The next step for actions and workflows; separate business case

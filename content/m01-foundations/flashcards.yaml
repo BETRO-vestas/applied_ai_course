@@ -1,52 +1,25 @@
 cards:
-- after: 1
-  front: What is an LLM, in one line?
-  back: A model of what text usually looks like, trained to predict the next token - not a model of what is true.
-- after: 1
-  front: The grid-team analogy for an LLM?
-  back: A generic model with typical parameters - plausible output that must be validated before it goes in a submission.
-- after: 1
-  front: What is a token?
-  back: The unit the model reads and writes - a word or part of a word.
-- after: 2
-  front: What is the context window?
-  back: Everything the model can see when it answers - prompt, history, attached files, instructions, tool results.
-- after: 2
-  front: What is grounding?
-  back: Making the model answer from material you supply instead of from memory.
-- after: 2
-  front: The four parts of a grounded prompt?
-  back: Supply the source, limit it to that source, ask for quotes as evidence, and allow "not stated".
-- after: 1
-  front: What is a training cutoff?
-  back: The date the model's knowledge stops. Later NER amendments and guideline versions are unknown unless you supply them.
-- after: 2
-  front: What is RAG?
-  back: Retrieval-augmented generation - search a document store and put only the relevant passages in the context.
-- after: 3
-  front: Why use code instead of mental maths?
-  back: Code is visible, repeatable and checkable. Numbers worked out inside a chat are not.
-- after: 3
-  front: Name four high-risk failure modes for grid work.
-  back: Invented specifics, stale knowledge, unit and base errors, and agreeable answers.
-- after: 4
-  front: What makes something an agent?
-  back: A loop - goal, plan, act with tools, observe the result, decide the next step.
-- after: 4
-  front: Workflow vs agent - which first for regulated processes?
-  back: Workflow - predictable, easy to audit, same steps every time.
-- after: 4
-  front: What is MCP?
-  back: Model Context Protocol - an open standard for connecting AI assistants to tools and data, such as SharePoint or Jira.
-- after: 2
-  front: What are custom instructions in Copilot?
-  back: A repository file (.github/copilot-instructions.md) added to every request - a standing team brief.
-- after: 5
-  front: The autonomy ladder rungs?
-  back: 0 None · 1 Assist · 2 Draft · 3 Do then review · 4 Do, review samples · 5 Autonomous.
-- after: 5
-  front: Four questions for placing a task on the ladder?
-  back: Consequence of an error, ease of checking, repetition, data sensitivity.
-- after: 3
-  front: Who is accountable for an AI-drafted study report?
-  back: The engineer who signs it - exactly as before.
+  - after: 1
+    front: "What is an LLM a model of?"
+    back: "What text usually looks like, not what is true"
+  - after: 2
+    front: "Grounding"
+    back: "Making Copilot answer from a source you can check, not from memory"
+  - after: 2
+    front: "Work vs Web"
+    back: "Work = your M365 data (Premium); Web = public web search"
+  - after: 2
+    front: "Copilot's permission rule"
+    back: "It can only find what you can open yourself"
+  - after: 1
+    front: "The most dangerous details"
+    back: "Dates, names, commitments, clause numbers: they look the same whether right or wrong"
+  - after: 2
+    front: '"Not stated"'
+    back: "Gives Copilot permission to leave a gap instead of inventing"
+  - after: 4
+    front: "Prompt injection"
+    back: "Hidden instructions in a document that try to steer the AI"
+  - after: 4
+    front: "Accountability"
+    back: "The sender or signer owns the content, however it was drafted"

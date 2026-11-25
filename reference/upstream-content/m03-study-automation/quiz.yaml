@@ -1,0 +1,73 @@
+questions:
+- scenario: Tom's four-day study re-run is mostly setting up cases, exporting channels, plotting and pasting figures into the report. The simulations themselves run overnight.
+  question: Where should automation start?
+  options:
+  - Speed up the simulation solver.
+  - Buy faster computers.
+  - Script post-processing and set-up - the stages around the simulation where the hours actually go.
+  - Rewrite the plant models.
+  answer: 2
+  explanation: The simulation isn't the bottleneck. Moving data around it is. Post-processing is high toil, low risk and easy to check, so it's a good first target.
+- scenario: An engineer wants help from Copilot debugging a script that loads a TNSP's confidential network model.
+  question: What's the safe pattern?
+  options:
+  - Share the script and the error message, describe the model's structure in general terms, and keep the model file and its data out of the prompt.
+  - Paste the model file into chat so Copilot has full context.
+  - Upload the model to a personal AI account instead.
+  - Never use Copilot for anything related to studies.
+  answer: 0
+  explanation: Copilot helps with code. The confidential data stays local. Follow your organisation's AI policy on what may be shared with approved tools.
+- scenario: The GPS says "settling time ≤ 5.0 s". Copilot's checker uses a ±5% band around the final value. Your team has always used ±10% of the change.
+  question: What's the real issue?
+  options:
+  - Copilot made a coding error.
+  - The definition was never written down, so the code made an assumption. Definitions must be explicit, agreed, and read from a criteria file.
+  - ±5% is always correct.
+  - It doesn't matter if the result passes either way.
+  answer: 1
+  explanation: The code filled a gap in the specification. The fix is to make definitions explicit data the code implements literally, using the NER, GPS or guideline definition where one exists.
+- scenario: Your checker reports 1.16 s for a known first-order signal whose exact 90% time is 1.151 s, sampled every 10 ms.
+  question: What does this tell you?
+  options:
+  - The checker is wrong.
+  - The test signal is wrong.
+  - Known-answer tests aren't useful for discrete data.
+  - The checker is consistent with the definition - the first sample past 90% is at 1.16 s. You understand its resolution.
+  answer: 3
+  explanation: Understanding why the answer differs from the analytic value - here, sample resolution - is exactly what builds justified trust in a tool.
+- scenario: A checker hits a response that never enters the settling band. The code's loop finds nothing and the result defaults to 0 s.
+  question: What has happened?
+  options:
+  - A silent failure - an unassessable case is reported as an instant pass.
+  - Nothing - 0 s is within the limit.
+  - A simulation error.
+  - A plotting problem.
+  answer: 0
+  explanation: This is the most dangerous kind of bug. Checkers need an explicit "can't assess" result, and known-answer tests should include a signal that never settles.
+- scenario: Agent mode wrote a checker, ran it, hit an error, fixed it, and now it runs cleanly on all cases.
+  question: What has been demonstrated?
+  options:
+  - The checker is correct.
+  - The checker runs. Correctness still needs known-answer tests and engineer review.
+  - The results can go straight into the report.
+  - Agent mode has validated the engineering logic.
+  answer: 1
+  explanation: The agent loop fixes crashes, not engineering logic. "It runs" is not "it's right".
+- scenario: A settling check on noisy R2 test data reports 18 s. With a 0.2 s centred moving average it reports 1.16 s.
+  question: What's the right handling?
+  options:
+  - Use whichever result passes.
+  - Report the unfiltered result.
+  - Ask Copilot which result is correct.
+  - Choose a filtering method as an engineering decision, document it - including that a centred filter shifts timing slightly earlier - and apply it consistently, ideally agreed in the test plan.
+  answer: 3
+  explanation: Every filter changes the answer. The choice is a judgement that must be explicit, documented and applied consistently - not picked to get a pass.
+- scenario: Copilot is writing code faster, and the team now has twelve personal scripts instead of five.
+  question: What is the leadership move?
+  options:
+  - Ban personal scripts.
+  - Let it continue; more scripts mean more automation.
+  - Create a shared, reviewed team toolkit with custom instructions, criteria files, known-answer tests, a named owner and version numbers.
+  - Outsource all scripting.
+  answer: 2
+  explanation: Copilot speeds up script writing either way. A shared toolkit turns that speed into team capability rather than more fragmented personal tools.

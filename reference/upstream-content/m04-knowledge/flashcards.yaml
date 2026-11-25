@@ -1,0 +1,43 @@
+cards:
+  - after: 1
+    front: The four steps of retrieval (RAG)?
+    back: Split documents into chunks, index them, search for the relevant chunks, answer from those chunks.
+  - after: 1
+    front: What are embeddings, in one line?
+    back: Numeric fingerprints of meaning, so search can match "mode transition" with "switch between modes".
+  - after: 1
+    front: Five ways retrieval goes wrong?
+    back: Wrong chunk, missing document, stale version, conflicting sources, chunk loses its context.
+  - after: 1
+    front: Four signs of a good retrieval answer?
+    back: Quotes its passage, names document, revision and section, says "not found" when empty, flags conflicts.
+  - after: 2
+    front: The traceability chain for a connection?
+    back: NER clause → GPS requirement → study case or test → result → document and section.
+  - after: 2
+    front: Three statuses in a compliance matrix?
+    back: Evidenced, Partial, Gap - proposed by AI with quotes, decided by the engineer.
+  - after: 2
+    front: Three traceability traps?
+    back: Superseded documents, partial coverage, and evidence by assertion.
+  - after: 3
+    front: Why is document hygiene part of an AI strategy?
+    back: Retrieval quality depends on document quality - messy stores produce confident answers from the wrong file.
+  - after: 3
+    front: Whose permissions does an MCP search tool use?
+    back: The user's - it finds only what you can open, so overly broad permissions become a risk.
+  - after: 3
+    front: How should lessons from other customers' projects be used?
+    back: As generic approaches only - never another customer's names, data or results.
+  - after: 4
+    front: The most valuable field in a comment library?
+    back: The reusable lesson - it turns a one-off fix into a template or checklist change.
+  - after: 4
+    front: When should comment knowledge be captured?
+    back: When the review round closes - as part of the register, not as a separate later task.
+  - after: 5
+    front: Why turn lessons into template changes?
+    back: A library still depends on someone searching it. A template change prevents the comment for everyone.
+  - after: 5
+    front: Two outcome measures for a knowledge workflow?
+    back: Repeat comment rate, and gaps found internally vs by reviewers.

@@ -1,27 +1,36 @@
 ---
-title: Larkspur Downs Wind Farm
+title: Coral Ridge Wind Farm
 ---
 
-> **Everything in this project pack is fictional.** The project, companies,
-> people, substation and numbers are made up for training. Any resemblance to a
-> real project is coincidental.
+**Everything in this project pack is fictional.** The project, companies,
+people and numbers are made up for training. Any resemblance to a real project
+is coincidental.
 
-## The project
+### The project
 
 | Item | Detail |
 |---|---|
-| Project | Larkspur Downs Wind Farm (LDWF) |
-| Developer | Larkspur Energy Pty Ltd (fictional) |
-| Capacity | 300 MW: 60 × 5.0 MW full-converter wind turbines |
-| Collector system | 33 kV, 6 feeders |
-| Main transformers | 2 × 180 MVA, 330/33 kV |
-| Connection point | Tallowood 330 kV terminal station (fictional), owned by **the TNSP** |
-| Market | National Electricity Market (NEM) |
-| Your organisation | The grid team of the turbine supplier, contracted to deliver the connection studies, models and GPS compliance evidence |
+| Project | Coral Ridge Wind Farm (CRWF) |
+| Developer (customer) | Brolga Energy (fictional) |
+| Capacity | 250 MW: 50 × 5.0 MW full-converter wind turbines |
+| Connection point | Coral Ridge 275 kV switching station (fictional), owned by **SouthGrid Networks** |
+| Network operator | SouthGrid Networks (fictional transmission network operator) |
+| Market operator | "The market operator" (kept generic) |
+| Your organisation | **Northwind Renewables**, turbine supplier. Its regional Grid Delivery team provides connection studies, plant models, compliance testing support and ongoing compliance service |
+| SCADA / plant controller vendor | Kestrel Controls (fictional subcontractor to Brolga) |
 
-## Why this project
+### Why this project
 
-The course uses LDWF as its running example. It is a typical NEM connection:
-negotiated GPS, an R1 package in review, AEMO and TNSP comment rounds, a
-commissioning programme with hold points, and an R2 validation still to come.
-Every lab uses its synthetic data, never real project data.
+Coral Ridge is a typical connection. The project has passed through all three
+workstreams of a Grid team:
+
+- **Connections:** studies, performance standard negotiation and the connection
+  agreement. Led by Priya until February 2026.
+- **Compliance:** model package, commissioning and hold point testing. Led by
+  Tom from March 2026. This is where the project is now.
+- **Service:** ongoing compliance after commissioning. Mei takes over in
+  December 2026.
+
+Every handover is a chance to lose something. The project's 18-month record
+(meetings, emails, chats, logs and plans) is spread across mail, Teams and
+files, which is exactly the problem a "Third Brain" is meant to solve.

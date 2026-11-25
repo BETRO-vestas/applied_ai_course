@@ -1,7 +1,7 @@
 import { render } from 'preact';
 import { useRoute } from './router';
 import { useProgress } from './store';
-import { Today, Path, ModuleView, LessonView, QuizView, LabView, MemoView, CardsView, PackView, SettingsView, NotFound } from './views';
+import { Today, Path, ModuleView, LessonView, QuizView, LabView, MemoView, WorkedView, CardsView, PackView, PromptsView, SettingsView, NotFound } from './views';
 import './styles.css';
 
 function Screen({ r }: { r: string[] }) {
@@ -10,6 +10,7 @@ function Screen({ r }: { r: string[] }) {
   if (a === 'path') return <Path />;
   if (a === 'cards') return <CardsView key={b ?? 'all'} id={b} />;
   if (a === 'pack') return <PackView slug={b} />;
+  if (a === 'prompts') return <PromptsView />;
   if (a === 'settings') return <SettingsView />;
   if (a === 'm' && b) {
     if (!c) return <ModuleView id={b} />;
@@ -17,6 +18,7 @@ function Screen({ r }: { r: string[] }) {
     if (c === 'quiz') return <QuizView id={b} />;
     if (c === 'lab') return <LabView id={b} />;
     if (c === 'memo') return <MemoView id={b} />;
+    if (c === 'worked') return <WorkedView id={b} />;
   }
   return <NotFound />;
 }
@@ -25,6 +27,7 @@ const tabs = [
   { to: '', label: 'Today', icon: '☀️', match: (a?: string) => !a },
   { to: 'path', label: 'Path', icon: '🧭', match: (a?: string) => a === 'path' || a === 'm' },
   { to: 'cards', label: 'Cards', icon: '🗂️', match: (a?: string) => a === 'cards' },
+  { to: 'prompts', label: 'Prompts', icon: '📋', match: (a?: string) => a === 'prompts' },
   { to: 'pack', label: 'Project', icon: '🌬️', match: (a?: string) => a === 'pack' },
   { to: 'settings', label: 'Settings', icon: '⚙️', match: (a?: string) => a === 'settings' },
 ];
